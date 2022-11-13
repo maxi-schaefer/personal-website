@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    border-bottom: 20px solid var(--border);
+    padding-bottom: 30px;
+
+    .text {
+        box-sizing: border-box;
+        transition: all 150ms linear 0s;
+        align-self: center;
+        min-width: 650px;
+        display: block;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+
+        h1 {
+            display: block;
+            font-family: 'Fira Code', monospace;
+            font-size: 1.9em;
+            color: var(--font);
+            font-weight: 700;
+        }
+    }
+
+    .info {
+        display: block;
+        padding-top: 30px;
+    }
+
+    .readMe {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Fira Code', monospace;
+        font-weight: 500;
+        font-size: 1.3em;
+        color: var(--font,#000000);
+        min-width: 80%;
+        width: 80%;
+        flex: 1 1 0%;
+
+        .years {
+            text-decoration: underline;
+        }
+    }
+
+    .socials {
+        display: flex;
+        padding: 0;
+        
+        li {
+            list-style: none;
+            padding-left: 0px;
+            padding-right: 10px;
+            opacity: 1;
+        }
+        
+        .Twitter:hover {
+            * {
+                color: var(--twitter);
+            }
+        }
+        
+        .Github:hover {
+            * {
+                color: var(--github);
+            }
+        }
+
+        .Youtube:hover {
+            * {
+                color: var(--youtube);
+            }
+        }
+
+        .Email:hover {
+            * {
+                color: rgb(110, 36, 230);
+            }
+        }
+
+        * {
+            font-size: 30px;
+            color: var(--font);
+            transition: all 250ms linear 0s;
+        }
+    }
+
+    .image {
+        img {
+            border-radius: 12px;
+            box-shadow: 0px 0px 25px #0000007a;
+            cursor: pointer;
+            pointer-events: none;
+            width: 350px;
+            max-height: 470px;
+        }
+    }
+
+}
