@@ -33,7 +33,9 @@ const ProjectCard = (props) => {
             <ul className="info">
                 <li>
                     <FaCircle style={{ color: repo.languageColor}} />
-                    {" " + repo.language}
+                    <p style={{ marginLeftt: "5px" }}>
+                        {repo.language}
+                    </p>
                 </li>
                 {repoStars}
                 {repoForks}

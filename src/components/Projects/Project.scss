@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: var(--font);
 }
 
 .CardContainer {
@@ -14,6 +15,7 @@
     grid-row-gap: 35px;
     justify-content: center;
     margin-bottom: 200px;
+    color: var(--font);
 
     .description {
         transform: translateY(-20px);

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Information from "./components/Information/Information";
 import Projects from "./components/Projects/Projects";
+import changeTheme from "./utils";
 
 function App() {
   const [githubData, setGithubData] = useState([])
@@ -20,7 +21,6 @@ function App() {
   const fetchRepos = async (user) => {
     const apiResponse = await fetch(`https://gh-pinned-repos.egoist.dev/?username=${user}`)
     const data = await apiResponse.json()
-    console.log(data)
     setGithubRepos(data)
   }
 
@@ -29,13 +29,22 @@ function App() {
       fetchRepos("gokiimax").catch(console.error)
     }, [])
 
+  const changeThemeWithKey = (e) => {
+    if(e.keyCode === 84) {
+      changeTheme()
+    }
+  }
+
   return (
-    <div>      
-        <Information data={githubData}/>
-        <Projects data={githubRepos}/>
-        <Footer />
-    </div>
+    <body className={window.localStorage.getItem("Theme")}>      
+      <div id="#main" tabIndex="0" onKeyDown={changeThemeWithKey}>
+          <Information data={githubData}/>
+          <Projects data={githubRepos}/>
+          <Footer />
+      </div>
+    </body>
   );
 }
 
 export default App;
+

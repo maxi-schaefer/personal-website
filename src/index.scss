@@ -1,37 +1,47 @@
 :root {
   --primary: rgb(238, 103, 103);
-  --bg: #181a1b;
-  --elements: #393939;
-  --elements-hover: #222222;
+  --bg: #111213;
+  --elements: #272727;
+  --elements-hover: #1a1919;
   --font: #ffffff;
-  --border: #111213;
+  --border: #080808;
   --twitter: #1c97ea;
   --github: #4d6589;
   --youtube: #ff0000;
 }
 
-:root #light {
+:root .light {
   --bg: #ffffff;
-  --elements: #c8c8c8;
-  --elements-hover: #787878;
+  --elements: #ebebeb;
+  --elements-hover: #dadada;
   --font: #000;
-  --border: #b2b2b2;
+  --border: #e4e4e4;
 }
 
 * {
   transition: all 150ms linear 0s;
 }
 
-html {
+#wrapper .light {
+  background-color: var(--bg);
+}
+
+html .light {
   background-color: var(--bg);
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: monospace;
+  overflow-x: hidden;
   background-color: var(--bg);
   color: var(--font);
   min-height: 100vh;
+}
+
+body .light {
+  background-color: var(--bg);
 }
 
 code {
@@ -53,6 +63,7 @@ footer {
   justify-content: space-between;
   padding-bottom: 40px;
   background-color: var(--bg);
+  color: var(--font);
 
   .left {
     left: 0px;
@@ -67,12 +78,21 @@ footer {
 
   a {
     text-decoration: none;
-    color: var(--font,#000000);
+    color: var(--font);
   }
 
   a:hover {
     color: var(--primary);
     text-decoration: underline;
+  }
+
+  .theme {
+    color: var(--font);
+    cursor: pointer;
+  }
+
+  .theme:hover {
+    color: var(--primary);
   }
 
   .right { 
@@ -83,5 +103,84 @@ footer {
     display: flex;
     font-size: 15px;
     opacity: 0.5;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--elements);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #wrapper {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 480px;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 480px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    border: none;
+
+    .text {
+      max-width: 480px;
+      min-width: none;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .image {
+      display: flex;
+      width: 150px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .container_cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 15px;
+  }
+  .CardContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 15px;
   }
 }
