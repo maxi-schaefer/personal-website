@@ -1,0 +1,54 @@
+{
+    "git_user": "username",
+    "discord_user": "discord_id",
+    "projects": [
+        {
+            "id": 0,
+            "name": "Smaug Reverse Shell",
+            "description": "A in python written Reverse Shell, with custom settings, client builder and obfuscator + custom written client.",
+            "language": "python",
+            "url": "https://github.com/maxi-schaefer/Smaug-Reverse-Shell",
+            "cover": "./images/smaug.png"
+        },
+        {
+            "id": 1,
+            "name": "Astro",
+            "description": "Simple electron js customization with config file.",
+            "language": "javascript",
+            "url": "https://github.com/maxi-schaefer/astro",
+            "cover": "./images/astro.png"
+        },
+        {
+            "id": 2,
+            "name": "Vortex",
+            "description": "Vortex is a in java written terminal template, where you can implement your own custom commands.",
+            "language": "java",
+            "url": "https://github.com/maxi-schaefer/vortex",
+            "cover": "./images/vortex.png"
+        },
+        {
+            "id": 3,
+            "name": "Sady",
+            "description": "A customizable, minimal start page for web browsers.",
+            "language": "website",
+            "url": "https://github.com/maxi-schaefer/sady",
+            "cover": "./images/sady.png"
+        },
+        {
+            "id": 4,
+            "name": "GLSL Sandbox",
+            "description": "Simple GLSLSandbox for shader testing written in Java.",
+            "language": "java",
+            "url": "https://github.com/maxi-schaefer/GLSLSandbox",
+            "cover": "./images/glslSandbox.png"
+        },
+        {
+            "id": 5,
+            "name": "Nemesis",
+            "description": "Nemesis is a in python written proxy scraper.",
+            "language": "python",
+            "url": "https://github.com/maxi-schaefer/Nemesis",
+            "cover": "./images/nemesis.png"
+        }
+    ]
+}

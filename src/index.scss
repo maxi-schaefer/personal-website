@@ -1,33 +1,64 @@
 :root {
-  --primary: rgb(238, 103, 103);
-  --bg: #111213;
-  --elements: #272727;
-  --elements-hover: #1a1919;
-  --font: #ffffff;
-  --border: #080808;
+  --primary: #8ec07c;
+  --bg: #0f0f0f;
+  --elements: #161616;
+  --elements-hover: #1d1d1d;
+  --font: #ebdbb2;
+  --font-darker: #5e5e5e;
   --twitter: #1c97ea;
   --github: #4d6589;
   --youtube: #ff0000;
+  --discord: #5865f2;
 }
 
-:root .light {
-  --bg: #ffffff;
-  --elements: #ebebeb;
-  --elements-hover: #dadada;
-  --font: #000;
-  --border: #e4e4e4;
+[data-theme="light"] {
+  --bg: #fae9bf;
+  --elements: #fff1ca;
+  --elements-hover: rgb(255, 230, 167);
+  --font: #0f0f0f;
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --elements: #161616;
+  --elements-hover: #1d1d1d;
+  --font: #ebdbb2;
+  --font-darker: #5e5e5e;
+}
+
+.snowflake {
+	display: inline-block;
+  position: relative;
+  cursor: default;
+	width: 0.4%;
+	color: #FFFAFA;
+	opacity: 0;
+	font-size: 120px;
+	margin: 0;
+	padding: 0;
+	animation: fall 16s linear infinite;
+  z-index: 1;
+}
+
+@keyframes fall {
+	0% {
+		opacity: 0;
+	}
+	3% {
+		opacity: 0.6;
+	}
+
+	90% {
+		opacity: 0.6;
+	}
+	100% {
+		transform: translate(0, 97vh);
+		opacity: 0;
+	}
 }
 
 * {
-  transition: all 150ms linear 0s;
-}
-
-#wrapper .light {
-  background-color: var(--bg);
-}
-
-html .light {
-  background-color: var(--bg);
+  transition: all 150ms ease-in-out 0s;
 }
 
 body {
@@ -38,10 +69,6 @@ body {
   background-color: var(--bg);
   color: var(--font);
   min-height: 100vh;
-}
-
-body .light {
-  background-color: var(--bg);
 }
 
 code {
@@ -72,8 +99,6 @@ footer {
     flex-direction: row;
     display: flex;
     font-size: 15px;
-    opacity: 0.5;
-
   }
 
   a {
@@ -102,7 +127,6 @@ footer {
     flex-direction: row;
     display: flex;
     font-size: 15px;
-    opacity: 0.5;
   }
 }
 
@@ -132,6 +156,7 @@ footer {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    max-width: 480px;
     flex-wrap: wrap;
   }
   #wrapper {
@@ -165,22 +190,66 @@ footer {
     }
 
     .image {
-      display: flex;
-      width: 150px;
-      align-items: center;
-      justify-content: center;
+      display: none;
     }
   }
   .container_cards {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 15px;
+    margin-left: 5px;
+    max-width: fit-content;
   }
   .CardContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 15px;
+
+    .card {
+      width: 350px
+    }
+
+    .card .image .cover {
+      width: 350px;
+    }
+
+    .card .info {
+      width: 350px;
+      height: 130px;
+    }
+  }
+
+  .contact_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    
+    .contact_card {
+      width: 350px;
+    }
+  }
+
+  .spotify_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: -15px;
+
+    a .spotify_card {
+      width: 350px;
+      margin-left: -15px;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    width: max-content;
+  }
+
+  .snowflake {
+    width: max-content;
   }
 }
+

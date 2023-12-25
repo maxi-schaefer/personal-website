@@ -1,45 +1,21 @@
 import React from 'react'
 import { FaCircle } from 'react-icons/fa'
-import { TbStar, TbGitFork } from 'react-icons/tb'
+import { getLanguageColor } from '../../utils.js'
 
 const ProjectCard = (props) => {
 
-    const { repo } = props;
-
-    let repoStars;
-    let repoForks;
-    if (repo.stars >= 1) {
-        repoStars = (
-            <li>
-                <TbStar />
-                {repo.stars}
-            </li>
-        )
-    }
-
-    if(repo.forks >= 1) {
-        repoForks = (
-            <li>
-                <TbGitFork />
-                {repo.forks}
-            </li>
-        )
-    }
+    const { project } = props;
 
     return (
         <div className="card">
-            <h3 className="project_name">{repo.repo}</h3>
-            <p className="description">{repo.description}</p>
-            <ul className="info">
-                <li>
-                    <FaCircle style={{ color: repo.languageColor}} />
-                    <p style={{ marginLeftt: "5px" }}>
-                        {repo.language}
-                    </p>
-                </li>
-                {repoStars}
-                {repoForks}
-            </ul>
+            <div className="image" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + project.cover})`, backgroundSize: "cover"}}>
+                <div className='cover'/>
+            </div>
+            <div className='info'>
+                <div className='project_name'>{project.name}</div>
+                <div className='project_description'>{project.description}</div>
+                <div className='language' style={{ color: `${getLanguageColor(project.language)}`, border: `1.5px solid ${getLanguageColor(project.language)}` }}><FaCircle size={6}/> {project.language}</div>
+            </div>
         </div>
     )
 }

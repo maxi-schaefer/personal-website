@@ -1,0 +1,52 @@
+.spotify_container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font);
+    margin-bottom: 15px;
+    
+    a {
+        cursor: pointer;
+        text-decoration: none;
+
+        .spotify_card {
+            display: flex;
+            width: 400px;
+            height: 125px;
+            border-radius: 12px;
+            background-color: var(--elements);
+            border: 1px solid var(--elements-hover);
+            align-items: center;
+            box-shadow: 0px 0px 10px #00000056;
+            
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 12px;
+                margin-left: 15px;
+                box-shadow: 0px 0px 15px #00000056;
+            }
+
+            .song_information {
+                display: flex;
+                flex-direction: column;
+
+                h2 {
+                    margin-left: 25px;
+                    color: var(--font);
+                }
+
+                p {
+                    position: relative;
+                    margin-left: 25px;
+                    transform: translate(0, -30px);
+                    color: var(--font-darker);
+                }
+            }
+
+
+        }
+    }
+}

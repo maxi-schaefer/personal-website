@@ -1,5 +1,3 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
 import './Project.scss'
 import ProjectCard from './ProjectCard'
 
@@ -8,13 +6,13 @@ const Projects = (props) => {
 
   return (
     <div className="container_cards">
-        <h1>Pinned Repositories</h1>
+        <h1>Example Projects</h1>
         <div className='CardContainer'>
             {
-                data.map((repo) => {
+                data.map((project) => {
                     return(
-                        <a href={repo.link} style={{ textDecoration: 'none'}}>
-                            <ProjectCard key={repo.link} repo={repo} />
+                        <a key={project.id} href={project.url} target='_blank' style={{ textDecoration: 'none'}}>
+                            <ProjectCard key={project.id} project={project} />
                         </a>
                     )
                 })
