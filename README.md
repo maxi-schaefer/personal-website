@@ -1,7 +1,9 @@
 # Maxi's Personal Site
 The code behind my personal site. :)
 
-![](demo.png)
+<a href="https://gokimax.netlify.app" target="_blank">
+  <img src="demo.png"/>
+</a>
 
 ## Powered By
 - [Github Api](https://docs.github.com/en/rest)
