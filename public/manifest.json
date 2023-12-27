@@ -1,6 +1,6 @@
 {
   "short_name": "Personal Website",
-  "name": "My own Personal Website",
+  "name": "Personal Website",
   "icons": [
     {
       "src": "logo.png",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#fff",
+  "background_color": "#0f0f0f"
 }

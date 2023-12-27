@@ -18,7 +18,6 @@
     
     .text {
         box-sizing: border-box;
-        transition: all 150ms linear 0s;
         align-self: center;
         display: block;
     }
@@ -68,17 +67,29 @@
     .socials {
         display: flex;
         padding: 0;
-        
+
         li {
             list-style: none;
             padding-left: 0px;
             padding-right: 10px;
             opacity: 1;
         }
+
+        .TryHackMe:hover {
+            * {
+                color: var(--tryhackme);
+            }
+        }
         
         .Twitter:hover {
             * {
                 color: var(--twitter);
+            }
+        }
+
+        .Instagram:hover {
+            * {
+                color: var(--instagram);
             }
         }
 
@@ -117,13 +128,16 @@
 
         .infos {
             position: relative;
+            display: flex;
+            text-align: center;
+            justify-content: center;
             border-radius: 50%;
-            transform: translate(250px, 350px);
+            transform: translate(250px, 330px);
             border: 15px solid var(--bg);
             bottom: 0;
             width: 50px;
             height: 50px;
-            background-color: #636363;
+            background-color: var(--bg);
         }
 
         img {

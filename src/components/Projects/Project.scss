@@ -28,12 +28,14 @@
         border-radius: 12px;
         justify-content: center;
         justify-items: end;
-        transition: all .5s ease-in-out;
+        transition: all .2s ease-in-out;
         color: var(--font);
 
         .image {
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
+            background-size: contain;
+            background-position: center;
         }
 
         .image .cover {

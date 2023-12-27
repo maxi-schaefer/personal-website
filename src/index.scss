@@ -9,13 +9,17 @@
   --github: #4d6589;
   --youtube: #ff0000;
   --discord: #5865f2;
+  --instagram: rgb(153, 37, 248);
+  --tryhackme: #801515;
+  --snow-length: 300vh;
 }
 
 [data-theme="light"] {
   --bg: #fae9bf;
-  --elements: #fff1ca;
-  --elements-hover: rgb(255, 230, 167);
+  --elements: #fae8b7;
+  --elements-hover: rgb(201, 180, 129);
   --font: #0f0f0f;
+  --font-darker: #8f8f8f;
 }
 
 [data-theme="dark"] {
@@ -36,7 +40,7 @@
 	font-size: 120px;
 	margin: 0;
 	padding: 0;
-	animation: fall 16s linear infinite;
+	animation: fall 24s linear infinite;
   z-index: 1;
 }
 
@@ -52,7 +56,7 @@
 		opacity: 0.6;
 	}
 	100% {
-		transform: translate(0, 97vh);
+		transform: translate(0, var(--snow-length));
 		opacity: 0;
 	}
 }
@@ -152,6 +156,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+  :root {
+    --snow-length: 440vh;
+  }
+
   body {
     overflow-x: hidden;
     display: flex;
@@ -166,6 +174,7 @@ footer {
     flex-wrap: wrap;
     max-width: 480px;
     margin: 0;
+    margin-top: -200px;
   }
   .container {
     width: 100%;
@@ -208,6 +217,10 @@ footer {
 
     .card {
       width: 350px
+    }
+
+    .card .image {
+      width: 350px;
     }
 
     .card .image .cover {

@@ -23,7 +23,7 @@ export function isChristmas() {
     var today = new Date()
     const start = Date.parse(`01 Dec ${today.getFullYear()} 00:00:00 GMT`);
     const end = Date.now();
-    const d = Date.parse(`27 Dec ${today.getFullYear()} 00:00:00 GMT`);
+    const d = Date.parse(`31 Dec ${today.getFullYear()} 00:00:00 GMT`);
 
     return d >= start && d <= end // true
 }
@@ -37,6 +37,17 @@ export function EmailToastify(text) {
         draggable: true,
         icon: ({}) => <TbMail color='var(--primary)' />,
         progress: undefined,
+        theme: `${localStorage.getItem("selectedTheme")}`,
+    });
+}
+
+export function CustomToastify(text, icon) {
+    toast.info(text, {
+        position: "top-right",
+        autoClose: false,
+        closeOnClick: true,
+        draggable: true,
+        icon: ({}) => icon,
         theme: `${localStorage.getItem("selectedTheme")}`,
     });
 }

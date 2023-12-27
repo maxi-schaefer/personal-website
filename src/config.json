@@ -1,6 +1,6 @@
 {
-    "git_user": "username",
-    "discord_user": "discord_id",
+    "git_user": "maxi-schaefer",
+    "discord_user": "1106596197306744882",
     "projects": [
         {
             "id": 0,
@@ -44,11 +44,11 @@
         },
         {
             "id": 5,
-            "name": "Nemesis",
-            "description": "Nemesis is a in python written proxy scraper.",
-            "language": "python",
-            "url": "https://github.com/maxi-schaefer/Nemesis",
-            "cover": "./images/nemesis.png"
+            "name": "EVE Discord Bot",
+            "description": "EVE is a all in one Discord Bot. It comes with many features such as a Giveaway System, Application System and much more.",
+            "language": "javascript",
+            "url": "https://github.com/maxi-schaefer/EVE-Bot",
+            "cover": "https://camo.githubusercontent.com/1b69db9bcc866d4b0c52ec1e48770dbf08e2cc314e5f15a8243303edaf5dad0d/68747470733a2f2f696d616765732e68647177616c6c732e636f6d2f77616c6c7061706572732f77616c6c2d652d6576652d6d696e696d616c2d346b2d6a652e6a7067"
         }
     ]
 }
