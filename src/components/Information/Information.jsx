@@ -104,7 +104,7 @@ const Information = (props) => {
                                 </li>
                                 <li>
                                     <Tippy content='Email' placement='bottom'>
-                                        <a className='Email' href="mailto:maxi.schaefer.dev@gmail.com"><TbMail /></a>
+                                        <a className='Email' href="mailto:schaefer.maxi0910@icloud.com"><TbMail /></a>
                                     </Tippy>
                                 </li>
                                 <li>

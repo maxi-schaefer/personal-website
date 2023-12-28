@@ -1,7 +1,15 @@
 {
-    "git_user": "username",
-    "discord_user": "discord_id",
+    "git_user": "maxi-schaefer",
+    "discord_user": "1106596197306744882",
     "projects": [
+        {
+            "id": 2,
+            "name": "Vortex",
+            "description": "Vortex is a in java written terminal template, where you can implement your own custom commands and configs",
+            "language": "java",
+            "url": "https://github.com/maxi-schaefer/vortex",
+            "cover": "./images/vortex.png"
+        },
         {
             "id": 0,
             "name": "Smaug Reverse Shell",
@@ -17,14 +25,6 @@
             "language": "javascript",
             "url": "https://github.com/maxi-schaefer/astro",
             "cover": "./images/astro.png"
-        },
-        {
-            "id": 2,
-            "name": "Vortex",
-            "description": "Vortex is a in java written terminal template, where you can implement your own custom commands.",
-            "language": "java",
-            "url": "https://github.com/maxi-schaefer/vortex",
-            "cover": "./images/vortex.png"
         },
         {
             "id": 3,
