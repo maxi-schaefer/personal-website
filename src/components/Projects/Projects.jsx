@@ -11,7 +11,7 @@ const Projects = (props) => {
             {
                 data.map((project) => {
                     return(
-                        <a key={project.id} href={project.url} target='_blank' style={{ textDecoration: 'none'}}>
+                        <a key={project.id} href={project.url} target='_blank' rel="noreferrer" style={{ textDecoration: 'none'}}>
                             <ProjectCard key={project.id} project={project} />
                         </a>
                     )

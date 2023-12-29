@@ -1,23 +1,21 @@
-import { TbBrandTwitter, TbBrandGithub, TbBrandYoutube, TbMail, TbBrandDiscord, TbBrandInstagram } from 'react-icons/tb'
-import { BsTriangleFill, BsCircleFill, BsMoonFill } from 'react-icons/bs'
-import { AiFillStop } from 'react-icons/ai'
-import { FaDotCircle, FaChess } from 'react-icons/fa'
 import './Information.scss'
-import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import { motion } from 'framer-motion'; 
+import Tippy from '@tippyjs/react';
 import config from '../../config.json' 
-import { useLanyard } from "react-use-lanyard";
+import { motion } from 'framer-motion'; 
 import Spotify from '../Spotify/Spotify'
-
+import { AiFillStop } from 'react-icons/ai'
+import { FaDotCircle } from 'react-icons/fa'
+import { useLanyard } from '../../lanyard/index.ts'
+import { BsTriangleFill, BsCircleFill, BsMoonFill } from 'react-icons/bs'
+import { TbBrandTwitter, TbBrandGithub, TbBrandYoutube, TbMail, TbBrandDiscord, TbBrandInstagram } from 'react-icons/tb'
 
 const Information = (props) => {
-
     const { data } = props
-    
+
     const lanyard = useLanyard({
-		userId: config.discord_user,
-	});
+        userId: config.discord_user,
+      });
 
     const discordStatus = (status) => {
         if(status === "dnd") {
@@ -71,7 +69,7 @@ const Information = (props) => {
                             <div className='readMe'>
                                 <div className='info'>Hi there <span>👋🏼</span> I'm Maxi, a <span style={{ textDecoration: "underline" }}>17</span> year old Student from Germany.</div>
                                 <div className='info'>Self-taught Developer</div>
-                                <div className='info'>“Never play to win a pawn while your development is yet unfinished.” - <a href='https://de.wikipedia.org/wiki/Aaron_Nimzowitsch' target='_blank'>Aron Nimzowitsch</a></div>
+                                <div className='info'>“Never play to win a pawn while your development is yet unfinished.” - <a href='https://de.wikipedia.org/wiki/Aaron_Nimzowitsch' target='_blank' rel="noreferrer">Aron Nimzowitsch</a></div>
                             </div>
 
                             <br/>

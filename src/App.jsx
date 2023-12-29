@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import { CustomToastify } from './utils'
-import config from "./config.json"
-import Contact from './components/Contact/Contact';
-import Footer from "./components/Footer/Footer";
-import Information from "./components/Information/Information";
-import Projects from "./components/Projects/Projects";
-import { changeTheme, isChristmas } from './utils'
-import AnimatedTitle from "./components/AnimatedTitle/AnimatedTitle";
-import Snow from './components/Christmas/Snow';
-import { motion } from "framer-motion";
 import $ from 'jquery';
-import { ToastContainer } from "react-toastify";
-import { TbBrandGithub } from "react-icons/tb";
+import config from "./config.json"
+import { motion } from "framer-motion";
+import { CustomToastify } from './utils'
 import { BsStarFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import { TbBrandGithub } from "react-icons/tb";
+import Snow from './components/Christmas/Snow';
+import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer/Footer";
+import { changeTheme, isChristmas } from './utils'
+import Contact from './components/Contact/Contact';
+import Projects from "./components/Projects/Projects";
+import Information from "./components/Information/Information";
+import AnimatedTitle from "./components/AnimatedTitle/AnimatedTitle";
 
 function App() {
   const [githubData, setGithubData] = useState([])
