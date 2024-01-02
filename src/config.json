@@ -5,7 +5,6 @@
         {
             "id": 2,
             "name": "Vortex",
-            "description": "Vortex is a in java written terminal template, where you can implement your own custom commands and configs",
             "language": "java",
             "url": "https://github.com/maxi-schaefer/vortex",
             "cover": "./images/vortex.png"
@@ -13,7 +12,6 @@
         {
             "id": 0,
             "name": "Smaug Reverse Shell",
-            "description": "A in python written Reverse Shell, with custom settings, client builder and obfuscator + custom written client.",
             "language": "python",
             "url": "https://github.com/maxi-schaefer/Smaug-Reverse-Shell",
             "cover": "./images/smaug.png"
@@ -21,23 +19,20 @@
         {
             "id": 1,
             "name": "Astro",
-            "description": "Simple electron js customization with config file.",
             "language": "javascript",
             "url": "https://github.com/maxi-schaefer/astro",
             "cover": "./images/astro.png"
         },
         {
             "id": 3,
-            "name": "Sady",
-            "description": "A customizable, minimal start page for web browsers.",
+            "name": "GitPulse",
             "language": "website",
-            "url": "https://github.com/maxi-schaefer/sady",
-            "cover": "./images/sady.png"
+            "url": "https://github.com/maxi-schaefer/GitPulse",
+            "cover": "https://github.com/maxi-schaefer/GitPulse/raw/main/demo.png"
         },
         {
             "id": 4,
             "name": "GLSL Sandbox",
-            "description": "Simple GLSLSandbox for shader testing written in Java.",
             "language": "java",
             "url": "https://github.com/maxi-schaefer/GLSLSandbox",
             "cover": "./images/glslSandbox.png"
@@ -45,7 +40,6 @@
         {
             "id": 5,
             "name": "EVE Discord Bot",
-            "description": "EVE is a all in one Discord Bot. It comes with many features such as a Giveaway System, Application System and much more.",
             "language": "javascript",
             "url": "https://github.com/maxi-schaefer/EVE-Bot",
             "cover": "https://camo.githubusercontent.com/1b69db9bcc866d4b0c52ec1e48770dbf08e2cc314e5f15a8243303edaf5dad0d/68747470733a2f2f696d616765732e68647177616c6c732e636f6d2f77616c6c7061706572732f77616c6c2d652d6576652d6d696e696d616c2d346b2d6a652e6a7067"

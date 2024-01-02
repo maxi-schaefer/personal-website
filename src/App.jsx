@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import i18n from "i18next";
 import config from "./config.json"
 import { motion } from "framer-motion";
 import { CustomToastify } from './utils'
@@ -8,14 +9,36 @@ import { TbBrandGithub } from "react-icons/tb";
 import Snow from './components/Christmas/Snow';
 import { ToastContainer } from "react-toastify";
 import Footer from "./components/Footer/Footer";
-import { changeTheme, isChristmas } from './utils'
+import { initReactI18next } from 'react-i18next';
+import { changeTheme, isChristmas } from './utils';
 import Contact from './components/Contact/Contact';
 import Projects from "./components/Projects/Projects";
 import Information from "./components/Information/Information";
 import AnimatedTitle from "./components/AnimatedTitle/AnimatedTitle";
+import translationEN from './locales/en/translation.json'
+import translationDE from './locales/de/translation.json'
+import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher';
 
 function App() {
   const [githubData, setGithubData] = useState([])
+
+  const resources = {
+    en: {
+      translation: translationEN,
+    },
+    de: {
+      translation: translationDE,
+    }
+  }
+
+  i18n.use(initReactI18next).init({
+    resources,
+    lng: localStorage.getItem("language"),
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
   const githubToast = () => (
     <div>
@@ -102,6 +125,7 @@ function App() {
       <AnimatedTitle titles={titles} time={1000}/>
       <motion.div id="#main" tabIndex="0" onKeyDown={changeThemeWithKey} initial={{ opacity: 0 }} animate={{ transition: { duration: 2.5 }, opacity: 1, }}>
           {!isChristmas() ? snow() : null}
+          <LanguageSwitcher currentLang={i18n.language} i18n={i18n} />
           <Information data={githubData}/>
           <Projects data={config.projects}/>
           <Contact /> 

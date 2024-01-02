@@ -17,6 +17,20 @@
         border: 1px solid var(--elements-hover);
         box-shadow: 0px 0px 10px #00000056;
     
+        .successSent {
+            display: flex;
+            width: 80%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                margin-top: -5px;
+                font-size: 18px;
+            }
+        }
+
         form {
             width: 80%;
 

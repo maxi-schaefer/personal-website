@@ -4,7 +4,11 @@ import "./toastify.css"
 
 export function setDarkMode() {
     localStorage.setItem("selectedTheme", "dark")
-} 
+}
+
+export function delay(ms) {
+    new Promise(res => setTimeout(res, ms));
+}
 
 export function setLightMode() {
     localStorage.setItem("selectedTheme", "light")

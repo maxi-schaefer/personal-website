@@ -1,0 +1,30 @@
+{
+    "aboutMe": {
+        "first": "Hi there 👋🏼 I'm Maxi, a ",
+        "second": " year old Student from Germany.",
+        "third": "Self-taught Developer"
+    },
+
+    "projects": {
+        "vortex": "Vortex is a in java written terminal template, where you can implement your own custom commands and configs",
+        "smaug_reverse_shell": "A in python written Reverse Shell, with custom settings, client builder and obfuscator + custom written client.",
+        "astro": "Simple electron js customization with config file.",
+        "gitpulse": "Create your own Github Overview website, where you can customize everything.",
+        "glsl_sandbox": "Simple GLSLSandbox for shader testing written in Java.",
+        "eve_discord_bot": "EVE is a all in one Discord Bot. It comes with many features such as a Giveaway System, Application System and much more."
+    },
+
+    "contact": {
+        "successfullySent": "Successfully sent ✅",
+        "contactSoon": "You message has been successfully sent. I will contact you very soon!",
+        "name": "🗣️ Your name",
+        "email": "📫 Your Email",
+        "message": "📝 Your Message",
+        "button": "Send it to me ✉️"
+    },
+
+    "popup": {
+        "follow": "Follow me on ",
+        "star": "Star this project on "
+    }
+}
