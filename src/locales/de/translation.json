@@ -15,7 +15,6 @@
     },
 
     "contact": {
-        "successfullySent": "Erfolgreich gesendet ✅",
         "contactSoon": "Ihre Nachricht wurde erfolgreich gesendet. Ich werde mich sehr bald bei Ihnen melden!",
         "name": "🗣️ Ihr Name",
         "email": "📫 Ihre Email",

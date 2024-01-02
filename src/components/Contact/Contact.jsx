@@ -7,16 +7,12 @@ const Contact = () => {
   const form = useRef();
   const { t } = useTranslation();
   const [emailStatus, setEmailStatus] = useState(false);
-  const [emailButton, setEmailButton] = useState(t("contact.button"))
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_dsicv0s', 'template_x7qfmh2', form.current, '832JdVWiGuFP37T9w');
-
-    setEmailButton(t("contact.successfullySent"));
-    await setTimeout(1000);
-
+    
     setEmailStatus(true);
     document.getElementById("contact_form").reset();
   }
@@ -37,7 +33,7 @@ const Contact = () => {
               <input type="text" required placeholder={t("contact.name")} name="from_name" id="from_name"/>
               <input type="email" required placeholder={t("contact.email")} name="reply_to" id="reply_to"/>
               <textarea className="content" required placeholder={t("contact.message")} name="message"/>
-              <button type="submit">{emailButton}</button>
+              <button type="submit">{t("contact.button")}</button>
           </form>
         )}
         </div>

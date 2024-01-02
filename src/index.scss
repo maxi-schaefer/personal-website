@@ -33,7 +33,7 @@
 .snowflake {
 	display: inline-block;
   position: relative;
-  cursor: default;
+  pointer-events: none;
 	width: 0.4%;
 	color: #FFFAFA;
 	opacity: 0;
