@@ -2,7 +2,7 @@
     opacity: .2;
     position: fixed;
     margin-left: 20px;
-    margin-top: -20px;
+    margin-top: 20px;
     background-color: var(--elements);
     width: 45px;
     border: 1px solid var(--font-darker);
@@ -92,8 +92,8 @@
 
 @media (max-width: 480px) {
     .langMenu {
-        margin-top: -90px;
         margin-left: 80%;
+        margin-top: 250px;
         
         .selectLangMenu {
             margin-left: -105px;

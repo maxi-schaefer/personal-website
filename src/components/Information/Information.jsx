@@ -1,7 +1,7 @@
 import './Information.scss'
 import 'tippy.js/dist/tippy.css';
 import Tippy from '@tippyjs/react';
-import config from '../../config.json' 
+import config from '../../config.json'
 import { motion } from 'framer-motion'; 
 import Spotify from '../Spotify/Spotify'
 import { AiFillStop } from 'react-icons/ai'
@@ -10,10 +10,13 @@ import { useTranslation } from 'react-i18next';
 import { useLanyard } from '../../lanyard/index.ts'
 import { BsTriangleFill, BsCircleFill, BsMoonFill } from 'react-icons/bs'
 import { TbBrandTwitter, TbBrandGithub, TbBrandYoutube, TbMail, TbBrandDiscord, TbBrandInstagram } from 'react-icons/tb'
+import { useState } from 'react';
 
 const Information = (props) => {
     const { t } = useTranslation();
     const { data } = props
+
+    const [weatherData, setWeatherData] = useState({});
 
     const lanyard = useLanyard({
         userId: config.discord_user,
@@ -64,7 +67,7 @@ const Information = (props) => {
                             <div className='name'>
                                 <h1 className="name">Maxi Schäfer
                                     <Tippy content="Also known as: “gokimax“" placement='bottom' style={{ marginLeft: "10px"}}>
-                                        <a><BsTriangleFill size={10} style={{ rotate: "180deg", marginLeft: "10px"}}/></a>
+                                        <span><BsTriangleFill size={10} style={{ rotate: "180deg", marginLeft: "10px"}}/></span>
                                     </Tippy>
                                 </h1>
                             </div>
@@ -121,9 +124,12 @@ const Information = (props) => {
                             <img src={data.avatar_url} alt="" />
                         </div>
                     </div>
-                    {
-                        !lanyard.isValidating && (<Spotify data={lanyard.data.data.spotify} listening_to_spotify={lanyard.data.data.listening_to_spotify}/>)
-                    }
+                    <div style={{ display: "flex", alignItems: "center" , justifyContent: "space-evenly"}}>
+                        {
+                            !lanyard.isValidating && (<Spotify data={lanyard.data.data.spotify} listening_to_spotify={lanyard.data.data.listening_to_spotify}/>)
+                        }
+                    </div>
+                    
                 </div>
             </motion.div>
         </>

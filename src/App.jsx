@@ -123,8 +123,8 @@ function App() {
     <>
       <ToastContainer />
       <AnimatedTitle titles={titles} time={1000}/>
+      {isChristmas() ? snow() : null}
       <motion.div id="#main" tabIndex="0" onKeyDown={changeThemeWithKey} initial={{ opacity: 0 }} animate={{ transition: { duration: 2.5 }, opacity: 1, }}>
-          {!isChristmas() ? snow() : null}
           <LanguageSwitcher currentLang={i18n.language} i18n={i18n} />
           <Information data={githubData}/>
           <Projects data={config.projects}/>

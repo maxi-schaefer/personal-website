@@ -1,5 +1,4 @@
 import { toast } from 'react-toastify'
-import { TbMail } from 'react-icons/tb'
 import "./toastify.css"
 
 export function setDarkMode() {
@@ -24,25 +23,11 @@ export function changeTheme() {
 }
 
 export function isChristmas() {
-    var today = new Date()
-    const start = Date.parse(`01 Dec ${today.getFullYear()} 00:00:00 GMT`);
-    const end = Date.now();
-    const d = Date.parse(`31 Dec ${today.getFullYear()} 00:00:00 GMT`);
+    var today = new Date();
+    let d1 = new Date(today.getFullYear(), 12, 1);
+    let d2 = new Date(today.getFullYear(), 12, 31);
 
-    return d >= start && d <= end // true
-}
-
-export function EmailToastify(text) {
-    toast.success(text, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        draggable: true,
-        icon: ({}) => <TbMail color='var(--primary)' />,
-        progress: undefined,
-        theme: `${localStorage.getItem("selectedTheme")}`,
-    });
+    return d1 < today && d2 > today;
 }
 
 export function CustomToastify(text, icon) {
@@ -51,7 +36,7 @@ export function CustomToastify(text, icon) {
         autoClose: false,
         closeOnClick: true,
         draggable: true,
-        icon: ({}) => icon,
+        icon: ({i}) => icon,
         theme: `${localStorage.getItem("selectedTheme")}`,
     });
 }

@@ -24,7 +24,7 @@ const Contact = () => {
         <div className="contact_card">
         {emailStatus ? (
           <div className="successSent">
-            <img src="logo.png" width={200}/>
+            <img src="logo.png" alt="logo" width={200}/>
             <h1>{t("contact.successfullySent")}</h1>
             <p>{t("contact.contactSoon")}</p>
           </div>

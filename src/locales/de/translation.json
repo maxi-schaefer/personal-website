@@ -11,7 +11,9 @@
         "astro": "Einfache Electron-JS-Anpassung mit Konfigurationsdatei.",
         "gitpulse": "Erstellen Sie Ihre eigene Github-Übersichtswebsite, auf der Sie alles anpassen können.",
         "glsl_sandbox": "Einfache GLSLSandbox für Shader-Tests, geschrieben in Java.",
-        "eve_discord_bot": "EVE ist ein All-in-One-Discord-Bot. Es verfügt über viele Funktionen wie ein Giveaway-System, ein Bewerbungssystem und vieles mehr."
+        "eve_discord_bot": "EVE ist ein All-in-One-Discord-Bot. Es verfügt über viele Funktionen wie ein Giveaway-System, ein Bewerbungssystem und vieles mehr.",
+        "hubx": "HubX ist ein Minecraft Spigot Lobby Plugin mit vielen Funktionen wie beispielsweise einer Tablist oder Custom join Items.",
+        "coinsx": "CoinsX ist ein Minecraft Spigot Coins Plugin mit einer MySQL Datenbank verknüpfung, tägliche Belohnungen und mehr."
     },
 
     "contact": {

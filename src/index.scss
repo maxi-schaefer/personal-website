@@ -34,10 +34,8 @@
 	display: inline-block;
   position: relative;
   pointer-events: none;
-	width: 0.4%;
 	color: #FFFAFA;
 	opacity: 0;
-	font-size: 120px;
 	margin: 0;
 	padding: 0;
 	animation: fall 24s linear infinite;
@@ -174,7 +172,6 @@ footer {
     flex-wrap: wrap;
     max-width: 480px;
     margin: 0;
-    margin-top: -200px;
   }
   .container {
     width: 100%;
@@ -229,7 +226,7 @@ footer {
 
     .card .info {
       width: 350px;
-      height: 130px;
+      height: 150px;
     }
   }
 
