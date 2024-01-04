@@ -10,13 +10,10 @@ import { useTranslation } from 'react-i18next';
 import { useLanyard } from '../../lanyard/index.ts'
 import { BsTriangleFill, BsCircleFill, BsMoonFill } from 'react-icons/bs'
 import { TbBrandTwitter, TbBrandGithub, TbBrandYoutube, TbMail, TbBrandDiscord, TbBrandInstagram } from 'react-icons/tb'
-import { useState } from 'react';
 
 const Information = (props) => {
     const { t } = useTranslation();
-    const { data } = props
-
-    const [weatherData, setWeatherData] = useState({});
+    const { data, quote } = props
 
     const lanyard = useLanyard({
         userId: config.discord_user,
@@ -74,7 +71,7 @@ const Information = (props) => {
                             <div className='readMe'>
                                 <div className='info'>{t("aboutMe.first")}<span style={{ textDecoration: "underline" }}>17</span>{t("aboutMe.second")}</div>
                                 <div className='info'>{t("aboutMe.third")}</div>
-                                <div className='info'>“Never play to win a pawn while your development is yet unfinished.” - <a href='https://de.wikipedia.org/wiki/Aaron_Nimzowitsch' target='_blank' rel="noreferrer">Aron Nimzowitsch</a></div>
+                                <div className='info'>“{quote.content}” - <span style={{ color: 'var(--primary)' }}>{quote.author}</span></div>
                             </div>
 
                             <br/>

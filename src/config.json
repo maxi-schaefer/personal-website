@@ -76,5 +76,29 @@
             "image": "./languages/sp.png",
             "key": "sp"
         }
-    ]
+    ],
+    "titles": [
+        "Vibing • Maxi Schäfer ",
+        "ibing • Maxi Schäfer V",
+        "bing • Maxi Schäfer Vi",
+        "ing • Maxi Schäfer Vib",
+        "ng • Maxi Schäfer Vibi",
+        "g • Maxi Schäfer Vibin",
+        " • Maxi Schäfer Vibing",
+        "• Maxi Schäfer Vibing ",
+        " Maxi Schäfer Vibing •",
+        "Maxi Schäfer Vibing • ",
+        "axi Schäfer Vibing • M",
+        "xi Schäfer Vibing • Ma",
+        "i Schäfer Vibing • Max",
+        " Schäfer Vibing • Maxi",
+        "Schäfer Vibing • Maxi ",
+        "chäfer Vibing • Maxi S",
+        "häfer Vibing • Maxi Sc",
+        "äfer Vibing • Maxi Sch",
+        "fer Vibing • Maxi Schä",
+        "er Vibing • Maxi Schäf",
+        "r Vibing • Maxi Schäfe",
+        " Vibing • Maxi Schäfer"
+      ]
 }

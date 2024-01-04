@@ -22,6 +22,7 @@ import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher';
 
 function App() {
   const [githubData, setGithubData] = useState([])
+  const [quote, setQuote] = useState([]);
 
   /* ====================================================================================== */
   // i18n resources
@@ -61,7 +62,8 @@ function App() {
   )
   
   useEffect(() => {
-    fetchData(config.git_user).catch(console.error)
+    fetchGithubData(config.git_user).catch(console.error)
+    fetchRandomQuote().catch(console.error);
     document.body.setAttribute('data-theme', localStorage.getItem("selectedTheme"));
     CustomToastify(githubStarToast, <BsStarFill style={{ color: "#fcf347", width: "50px", height: "50px"}} />);
     CustomToastify(githubToast, <TbBrandGithub style={{ color: "var(--primary)", width: "50px", height: "50px"}} />);
@@ -86,41 +88,23 @@ function App() {
   
   /* ====================================================================================== */
   
-  // Animated Title
-  const titles = [
-    'Vibing • Maxi Schäfer ',
-    'ibing • Maxi Schäfer V',
-    'bing • Maxi Schäfer Vi',
-    'ing • Maxi Schäfer Vib',
-    'ng • Maxi Schäfer Vibi',
-    'g • Maxi Schäfer Vibin',
-    ' • Maxi Schäfer Vibing',
-    '• Maxi Schäfer Vibing ',
-    ' Maxi Schäfer Vibing •',
-    'Maxi Schäfer Vibing • ',
-    'axi Schäfer Vibing • M',
-    'xi Schäfer Vibing • Ma',
-    'i Schäfer Vibing • Max',
-    ' Schäfer Vibing • Maxi',
-    'Schäfer Vibing • Maxi ',
-    'chäfer Vibing • Maxi S',
-    'häfer Vibing • Maxi Sc',
-    'äfer Vibing • Maxi Sch',
-    'fer Vibing • Maxi Schä',
-    'er Vibing • Maxi Schäf',
-    'r Vibing • Maxi Schäfe',
-    ' Vibing • Maxi Schäfer',
-  ]
-  
-  /* ====================================================================================== */
-  
-  const fetchData = async (user) => {
+  const fetchGithubData = async (user) => {
     const apiResponse = await fetch(`https://api.github.com/users/${user}`)
     const data = await apiResponse.json()
     if(data.status === 404) {
       return;
     } else {
       setGithubData(data)
+    }
+  }
+
+  const fetchRandomQuote = async () => {
+    const apiResponse = await fetch(`https://api.quotable.io/random?maxLength=64`);
+    const data = await apiResponse.json();
+    if(data.status === 404) {
+      return;
+    } else {
+      setQuote(data);
     }
   }
   
@@ -138,11 +122,11 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <AnimatedTitle titles={titles} time={1000}/>
+      <AnimatedTitle titles={config.titles} time={1000}/>
       {isChristmas() ? snow() : null}
       <motion.div id="#main" tabIndex="0" onKeyDown={changeThemeWithKey} initial={{ opacity: 0 }} animate={{ transition: { duration: 2.5 }, opacity: 1, }}>
           <LanguageSwitcher currentLang={i18n.language} i18n={i18n} />
-          <Information data={githubData}/>
+          <Information data={githubData} quote={quote}/>
           <Projects data={config.projects}/>
           <Contact /> 
           <Footer />
