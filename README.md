@@ -8,3 +8,4 @@ The code behind my personal site. :)
 ## Powered By
 - [Github Api](https://docs.github.com/en/rest)
 - [Lanyard Api](https://github.com/Phineas/lanyard)
+- [Random Quotes Api](https://github.com/lukePeavey/quotable)
