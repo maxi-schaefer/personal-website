@@ -126,7 +126,8 @@
 
     .image {
 
-        .infos {
+        svg {
+            pointer-events: none;
             position: relative;
             display: flex;
             text-align: center;

@@ -4,11 +4,9 @@ import Tippy from '@tippyjs/react';
 import config from '../../config.json'
 import { motion } from 'framer-motion'; 
 import Spotify from '../Spotify/Spotify'
-import { AiFillStop } from 'react-icons/ai'
-import { FaDotCircle } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next';
 import { useLanyard } from '../../lanyard/index.ts'
-import { BsTriangleFill, BsCircleFill, BsMoonFill } from 'react-icons/bs'
+import { BsTriangleFill } from 'react-icons/bs'
 import { TbBrandTwitter, TbBrandGithub, TbBrandYoutube, TbMail, TbBrandDiscord, TbBrandInstagram } from 'react-icons/tb'
 
 const Information = (props) => {
@@ -21,36 +19,28 @@ const Information = (props) => {
 
     const discordStatus = (status) => {
         if(status === "dnd") {
-            return ( 
-                <Tippy content="do not disturb">
-                    <div className="infos" >
-                        <AiFillStop width={50} style={{ transform: "rotate(-45deg)", backgroundColor: "var(--bg)", color: "#f74343", width: "50px", height: "50px"}}/>
-                    </div>
-                </Tippy>
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72ZM14 31C11.7909 31 10 32.7909 10 35V37C10 39.2091 11.7909 41 14 41H58C60.2091 41 62 39.2091 62 37V35C62 32.7909 60.2091 31 58 31H14Z" fill="#F23F43"/>
+                </svg>
             )
         } else if(status === "online") {
-            return ( 
-                <Tippy content="online">
-                    <div className="infos" >
-                        <BsCircleFill width={50} style={{ backgroundColor: "var(--bg)", color: "#37d451", width: "50px", height: "50px"}}/>
-                    </div>
-                </Tippy>
+            return (                  
+                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                    <path d="M72 36C72 55.8823 55.8823 72 36 72C16.1177 72 0 55.8823 0 36C0 16.1177 16.1177 0 36 0C55.8823 0 72 16.1177 72 36Z" fill="#23A55A"/>
+                </svg>
             )
         } else if(status === "idle") {
             return ( 
-                <Tippy content="idle">
-                    <div className="infos" >
-                        <BsMoonFill width={50} style={{ backgroundColor: "var(--bg)", color: "#f1b634", width: "50px", height: "50px", transform: "scale(-1, 1)"}}/>
-                    </div>
-                </Tippy>
+                <svg xmlns="http://www.w3.org/2000/svg" width="73" height="73" viewBox="0 0 73 73" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5032 71.1245C44.514 76.9463 64.6448 66.2545 70.4666 47.2437C76.2884 28.2329 65.5966 8.10212 46.5858 2.28032C42.085 0.902013 37.5214 0.449299 33.0997 0.813442C41.1801 6.97632 44.991 17.7338 41.8412 28.0192C37.7983 41.2211 23.8186 48.646 10.6166 44.6031C6.47117 43.3336 2.89533 41.0844 0.0652862 38.1871C0.677369 53.0225 10.4994 66.5298 25.5032 71.1245Z" fill="#F0B232"/>
+                </svg>
             )
         } else {
             return ( 
-                <Tippy content="offline">
-                    <div className="infos" >
-                        <FaDotCircle width={50} style={{ backgroundColor: "var(--bg)", color: "#636363", width: "50px", height: "50px"}}/>
-                    </div>
-                </Tippy>
+                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72ZM36 54C45.9411 54 54 45.9411 54 36C54 26.0589 45.9411 18 36 18C26.0589 18 18 26.0589 18 36C18 45.9411 26.0589 54 36 54Z" fill="#7f838d"/>
+                </svg>
             )
         }
     }
