@@ -1,6 +1,6 @@
 :root {
-    --toastify-color-light: #ebdbb2;
-    --toastify-color-dark: #161616;
+    --toastify-color-light: #f4f4f5;
+    --toastify-color-dark: var(--elements);
     --toastify-color-success: #8ec07c;
     --toastify-icon-color-info: var(--toastify-color-info);
     --toastify-icon-color-success: var(--toastify-color-success);

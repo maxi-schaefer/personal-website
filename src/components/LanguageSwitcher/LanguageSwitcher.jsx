@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './LanguageSwitcher.scss'
+import config from '../../config.json';
 
 const LanguageSwitcher = (props) => {
 
@@ -20,14 +21,15 @@ const LanguageSwitcher = (props) => {
         </div>
         <div className='selectLangMenu' id='menu'>
             <ul>
-                <li onClick={(e) => {i18n.changeLanguage("en"); setSelectedLang("en"); localStorage.setItem("language", "en")}}>
-                    <img src={`languages/en.png`} alt=''/>
-                    <p>English</p>
-                </li>
-                <li onClick={(e) => {i18n.changeLanguage("de"); setSelectedLang("de"); localStorage.setItem("language", "de")}}>
-                    <img src={`languages/de.png`} alt=''/>
-                    <p>German</p>
-                </li>
+                {
+                    config.languages.map((l) => {
+                        return(
+                        <li key={l.key} onClick={(e) => {i18n.changeLanguage(l.key); setSelectedLang(l.key); localStorage.setItem("language", l.key)}}>
+                            <img src={l.image} alt=''/>
+                            <p>{l.name}</p>
+                        </li>);
+                    })
+                }
             </ul>
         </div>
     </div>

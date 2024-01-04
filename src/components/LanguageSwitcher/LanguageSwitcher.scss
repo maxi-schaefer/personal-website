@@ -5,7 +5,7 @@
     margin-top: 20px;
     background-color: var(--elements);
     width: 45px;
-    border: 1px solid var(--font-darker);
+    border: 1px solid var(--elements-hover);
     height: 45px;
     border-radius: 50%;
     z-index: 99;
@@ -33,7 +33,7 @@
         align-items: center;
         width: 125px;
         border-radius: 0px 12px 12px 12px;
-        border: 1px solid var(--font-darker);
+        border: 1px solid var(--elements-hover);
         margin-left: 25px;
         margin-top: 7.5px;
 
@@ -66,11 +66,11 @@
                 }
             }
 
-            li:nth-child(1) {
+            li:first-child {
                 border-radius: 0px 12px 0px 0px;
             }
 
-            li:nth-child(2) {
+            li:last-child {
                 border-radius: 0px 0px 12px 12px;
             }
 

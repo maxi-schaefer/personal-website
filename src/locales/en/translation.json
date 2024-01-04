@@ -22,10 +22,5 @@
         "email": "📫 Your Email",
         "message": "📝 Your Message",
         "button": "Send it to me ✉️"
-    },
-
-    "popup": {
-        "follow": "Follow me on ",
-        "star": "Star this project on "
     }
 }

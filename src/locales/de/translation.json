@@ -22,10 +22,5 @@
         "email": "📫 Ihre Email",
         "message": "📝 Ihre Nachricht",
         "button": "Schick Sie es mir ✉️"
-    },
-
-    "popup": {
-        "follow": "Folg mir auf ",
-        "star": "Geben Sie einen Stern auf "
     }
 }

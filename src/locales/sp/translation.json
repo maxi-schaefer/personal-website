@@ -1,0 +1,26 @@
+{
+    "aboutMe": {
+        "first": "Hola, 👋🏻 soy Maxi, un estudiante de ",
+        "second": " años de Alemania.",
+        "third": "Desarrollador autodidacta"
+    },
+
+    "projects": {
+        "vortex": "Vortex es una plantilla de terminal escrita en Java, donde puede implementar sus propios comandos y configuraciones personalizados.",
+        "smaug_reverse_shell": "Un Shell inverso escrito en Python, con configuraciones personalizadas, generador de clientes y ofuscador + cliente escrito personalizado.",
+        "astro": "Personalización simple de electron js con archivo de configuración.",
+        "gitpulse": "Crea tu propio sitio web de descripción general de Github, donde podrás personalizar todo.",
+        "glsl_sandbox": "GLSLSandbox simple para pruebas de sombreado escrito en Java.",
+        "eve_discord_bot": "EVE es un Discord Bot todo en uno. Viene con muchas funciones, como un sistema de sorteos, un sistema de solicitudes y mucho más.",
+        "hubx": "HubX es un complemento de Minecraft Spigot Lobby con muchas funciones, como una lista de pestañas o elementos de unión personalizados.",
+        "coinsx": "CoinsX es un complemento de Minecraft Spigot Coins con una conexión a una base de datos MySQL, recompensas diarias y más."
+    },
+
+    "contact": {
+        "contactSoon": "Su mensaje ha sido enviado exitosamente. ¡Me pondré en contacto contigo muy pronto!",
+        "name": "🗣️ Tu nombre",
+        "email": "📫 Tu correo electrónico",
+        "message": "📝 Tu mensaje",
+        "button": "Envíamelo ✉️"
+    }
+}
