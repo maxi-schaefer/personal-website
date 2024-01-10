@@ -22,5 +22,10 @@
         "email": "📫 Your Email",
         "message": "📝 Your Message",
         "button": "Send it to me ✉️"
+    },
+
+    "footer": {
+        "heart": "Made with ",
+        "time": "Current time: "
     }
 }

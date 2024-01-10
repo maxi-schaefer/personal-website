@@ -27,7 +27,7 @@
         {
             "id": 3,
             "name": "GitPulse",
-            "language": "website",
+            "language": "reactJS",
             "url": "https://github.com/maxi-schaefer/GitPulse",
             "cover": "https://github.com/maxi-schaefer/GitPulse/raw/main/demo.png"
         },

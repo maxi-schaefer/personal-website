@@ -55,6 +55,10 @@ export function getLanguageColor(language) {
             name: "java",
             color: "#eb8634"
         },
+        {
+            name: "reactJS",
+            color: "#149eca"
+        }
     ]
 
     for(var i = 0; i < colors.length; i++) {

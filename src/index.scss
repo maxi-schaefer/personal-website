@@ -78,7 +78,7 @@ code {
 
 // =============================================== FOOTER =============================================== //
 
-footer {
+.footer {
   position: fixed;
   bottom: 0px;
   display: flex;
@@ -253,10 +253,14 @@ footer {
     a .spotify_card {
       width: 350px;
       margin-left: -15px;
+
+      .song_information h2 {
+        width: 200px;
+      }
     }
   }
 
-  footer {
+  .footer {
     flex-direction: column;
     width: max-content;
   }

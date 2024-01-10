@@ -21,6 +21,11 @@
         "name": "🗣️ Ihr Name",
         "email": "📫 Ihre Email",
         "message": "📝 Ihre Nachricht",
-        "button": "Schick Sie es mir ✉️"
+        "button": "Senden ✉️"
+    },
+
+    "footer": {
+        "heart": "Gemacht mit ",
+        "time": "Es ist: "
     }
 }

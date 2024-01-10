@@ -22,5 +22,10 @@
         "email": "📫 Tu correo electrónico",
         "message": "📝 Tu mensaje",
         "button": "Envíamelo ✉️"
+    },
+
+    "footer": {
+        "heart": "Hecho con ",
+        "time": "Tiempo actual: "
     }
 }

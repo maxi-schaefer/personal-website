@@ -3,9 +3,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { TbMoon } from 'react-icons/tb'
 import { changeTheme } from '../../utils'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
 
+  const { t } = useTranslation();
   const [time, setTime] = useState(new Date())
   const formattedTime = time.toLocaleTimeString("de-DE");
 
@@ -14,11 +16,11 @@ const Footer = () => {
   })
 
   return (
-    <footer>
+    <div className="footer">
         <div className="left">
-            <div>Made with <span style={{ color: "var(--primary)"}}>♥️</span></div>
+            <div>{t("footer.heart")}<span style={{ color: "var(--primary)"}}>♥️</span></div>
             <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>•</div>
-            <div>Current Time: <span style={{ color: "var(--primary)"}}>{formattedTime}</span></div>
+            <div>{t("footer.time")}<span style={{ color: "var(--primary)"}}>{formattedTime}</span></div>
         </div>
         <div className="right">
             <div>
@@ -31,7 +33,7 @@ const Footer = () => {
             <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>•</div>
             <a href="https://github.com/gokiimax/personal-website">View Source</a>
         </div>
-    </footer>
+    </div>
   )
 }
 
