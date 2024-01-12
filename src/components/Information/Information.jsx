@@ -61,7 +61,7 @@ const Information = (props) => {
                             <div className='readMe'>
                                 <div className='info'>{t("aboutMe.first")}<span style={{ textDecoration: "underline" }}>17</span>{t("aboutMe.second")}</div>
                                 <div className='info'>{t("aboutMe.third")}</div>
-                                <div className='info'>“{quote.content}” - <span style={{ color: 'var(--primary)' }}>{quote.author}</span></div>
+                                <div className='info'>“Under observation, we act less free, which means we effectively are less free.” - <span style={{ color: 'var(--primary)' }}>Edward Snowden</span></div>
                             </div>
 
                             <br/>
