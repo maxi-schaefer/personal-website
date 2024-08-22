@@ -1,8 +1,7 @@
 {
     "aboutMe": {
         "first": "Hallo 👋🏻 Ich bin Maxi, ein ",
-        "second": "-Jähriger Schüler aus Deutschland.",
-        "third": "Selbst beigebrachter Programmierer"
+        "me": "Hallo 👋🏻 Ich bin Maxi, ein {age}-Jähriger Schüler aus Deutschland."
     },
 
     "projects": {

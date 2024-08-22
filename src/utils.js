@@ -22,10 +22,14 @@ export function changeTheme() {
     document.body.setAttribute('data-theme', localStorage.getItem("selectedTheme"));
 }
 
-export function isChristmas() {
+export function calculateAge(dateString) {
+    return Math.floor((new Date() - new Date(dateString).getTime()) / 3.15576e+10)
+}
+
+export function isChristmas(from, till) {
     var today = new Date();
-    let d1 = new Date(today.getFullYear(), 12, 1);
-    let d2 = new Date(today.getFullYear(), 12, 31);
+    let d1 = new Date(today.getFullYear() + "-" + from);
+    let d2 = new Date(today.getFullYear() + "-" + till);
 
     return d1 < today && d2 > today;
 }
@@ -33,7 +37,7 @@ export function isChristmas() {
 export function CustomToastify(text, icon) {
     toast.info(text, {
         position: "top-right",
-        autoClose: false,
+        autoClose: true,
         closeOnClick: true,
         draggable: true,
         icon: ({i}) => icon,

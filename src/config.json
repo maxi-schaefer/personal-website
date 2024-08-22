@@ -1,7 +1,12 @@
 {
     "git_user": "maxi-schaefer",
     "discord_user": "1106596197306744882",
+    "born": "2006-10-09",
     "city": "Ebersberg",
+    "christmas": {
+        "from": "12-01",
+        "till": "12-31"
+    },
     "projects": [
         {
             "id": 0,
@@ -43,21 +48,21 @@
             "name": "EVE Discord Bot",
             "language": "javascript",
             "url": "https://github.com/maxi-schaefer/EVE-Bot",
-            "cover": "https://camo.githubusercontent.com/1b69db9bcc866d4b0c52ec1e48770dbf08e2cc314e5f15a8243303edaf5dad0d/68747470733a2f2f696d616765732e68647177616c6c732e636f6d2f77616c6c7061706572732f77616c6c2d652d6576652d6d696e696d616c2d346b2d6a652e6a7067"
+            "cover": "https://images.hdqwalls.com/wallpapers/wall-e-eve-minimal-4k-je.jpg"
         },
         {
             "id": 6,
             "name": "HubX",
             "language": "java",
             "url": "https://www.spigotmc.org/resources/hubx.108373/",
-            "cover": "./images/hubX.png"
+            "cover": "./images/skeleton.png"
         },
         {
             "id": 7,
             "name": "CoinsX",
             "language": "java",
             "url": "https://www.spigotmc.org/resources/coinsx.108328/",
-            "cover": "./images/coinsX.png"
+            "cover": "./images/skeleton.png"
         }
     ],
     "languages": [
@@ -70,35 +75,7 @@
             "name": "German",
             "image": "./languages/de.png",
             "key": "de"
-        },
-        {
-            "name": "Spanish",
-            "image": "./languages/sp.png",
-            "key": "sp"
         }
     ],
-    "titles": [
-        "Vibing • Maxi Schäfer ",
-        "ibing • Maxi Schäfer V",
-        "bing • Maxi Schäfer Vi",
-        "ing • Maxi Schäfer Vib",
-        "ng • Maxi Schäfer Vibi",
-        "g • Maxi Schäfer Vibin",
-        " • Maxi Schäfer Vibing",
-        "• Maxi Schäfer Vibing ",
-        " Maxi Schäfer Vibing •",
-        "Maxi Schäfer Vibing • ",
-        "axi Schäfer Vibing • M",
-        "xi Schäfer Vibing • Ma",
-        "i Schäfer Vibing • Max",
-        " Schäfer Vibing • Maxi",
-        "Schäfer Vibing • Maxi ",
-        "chäfer Vibing • Maxi S",
-        "häfer Vibing • Maxi Sc",
-        "äfer Vibing • Maxi Sch",
-        "fer Vibing • Maxi Schä",
-        "er Vibing • Maxi Schäf",
-        "r Vibing • Maxi Schäfe",
-        " Vibing • Maxi Schäfer"
-      ]
+    "title": "Vibing • Maxi Schäfer • "
 }

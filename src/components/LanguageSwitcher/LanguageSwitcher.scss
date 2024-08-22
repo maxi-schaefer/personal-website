@@ -1,5 +1,4 @@
 .langMenu {
-    opacity: .2;
     position: fixed;
     margin-left: 20px;
     margin-top: 20px;
@@ -82,33 +81,6 @@
 
     .selectLangMenu.open {
         display: block;
-    }
-
-}
-
-.langMenu:hover {
-    opacity: 1;
-}
-
-@media (max-width: 480px) {
-    .langMenu {
-        margin-left: 80%;
-        margin-top: 250px;
-        
-        .selectLangMenu {
-            margin-left: -105px;
-            border-radius: 12px 0px 12px 12px;
-            
-            ul {
-                li:nth-child(1) {
-                    border-radius: 12px 0px 0px 0px;
-                }
-    
-                li:nth-child(2) {
-                    border-radius: 0px 0px 12px 12px;
-                }
-            }
-        }
     }
 
 }

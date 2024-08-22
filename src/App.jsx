@@ -14,7 +14,6 @@ import { changeTheme, isChristmas } from './utils';
 import Contact from './components/Contact/Contact';
 import Projects from "./components/Projects/Projects";
 import translationEN from './locales/en/translation.json';
-import translationSP from './locales/sp/translation.json';
 import translationDE from './locales/de/translation.json';
 import Information from "./components/Information/Information";
 import AnimatedTitle from "./components/AnimatedTitle/AnimatedTitle";
@@ -33,9 +32,6 @@ function App() {
     de: {
       translation: translationDE,
     },
-    sp: {
-      translation: translationSP,
-    }
   }
   
   i18n.use(initReactI18next).init({
@@ -80,7 +76,7 @@ function App() {
       fontSize = `${(Math.floor(Math.random()*10) + 10)}px`;
       let style = {
         animationDelay,
-        fontSize
+        fontSize,
       }
       return (<Snow key={i} id={i} style={style}/>)
     })
@@ -122,8 +118,8 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <AnimatedTitle titles={config.titles} time={1000}/>
-      {isChristmas() ? snow() : null}
+      <AnimatedTitle text={config.title} time={1000}/>
+      {isChristmas(config.christmas.from, config.christmas.till) ? snow() : null}
       <motion.div id="#main" tabIndex="0" onKeyDown={changeThemeWithKey} initial={{ opacity: 0, }} animate={{ transition: { duration: 0.5 }, opacity: 1 }}>
           <LanguageSwitcher currentLang={i18n.language} i18n={i18n} />
           <Information data={githubData} quote={quote}/>

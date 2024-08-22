@@ -20,6 +20,45 @@
     grid-column-gap: 45px;
     grid-row-gap: 35px;
 
+    .card::after {
+        content: "";
+        position: absolute;
+        background-image: conic-gradient(from var(--angle), transparent 70%, var(--primary), var(--second));
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        z-index: -1;
+        padding: 3px;
+        animation: 3s spin linear infinite;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+    }
+    
+    .card::before {
+        content: "";
+        filter: blur(10px);
+        position: absolute;
+        background-image: conic-gradient(from var(--angle), transparent 70%, var(--primary), var(--second));
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        z-index: -1;
+        padding: 3px;
+        animation: 3s spin linear infinite;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+    }
+
+    .card:hover::after, .card:hover::before {
+        opacity: 1;
+    }
+
     .card {
         position: relative;
         border: 1px solid var(--elements-hover);

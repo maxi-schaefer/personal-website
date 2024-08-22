@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="left">
             <div>{t("footer.heart")}<span style={{ color: "var(--primary)"}}>♥️</span></div>
             <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>•</div>
-            <div>{t("footer.time")}<span style={{ color: "var(--primary)"}}>{formattedTime}</span></div>
+            <div className='time'>{t("footer.time")}<span style={{ color: "var(--primary)"}}>{formattedTime}</span></div>
         </div>
         <div className="right">
             <div>

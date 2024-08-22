@@ -8,10 +8,11 @@ import { useTranslation } from 'react-i18next';
 import { useLanyard } from '../../lanyard/index.ts'
 import { BsTriangleFill } from 'react-icons/bs'
 import { TbBrandTwitter, TbBrandGithub, TbBrandYoutube, TbMail, TbBrandDiscord, TbBrandInstagram } from 'react-icons/tb'
+import { calculateAge } from '../../utils.js';
 
 const Information = (props) => {
     const { t } = useTranslation();
-    const { data, quote } = props
+    const { data } = props
 
     const lanyard = useLanyard({
         userId: config.discord_user,
@@ -59,9 +60,8 @@ const Information = (props) => {
                                 </h1>
                             </div>
                             <div className='readMe'>
-                                <div className='info'>{t("aboutMe.first")}<span style={{ textDecoration: "underline" }}>17</span>{t("aboutMe.second")}</div>
-                                <div className='info'>{t("aboutMe.third")}</div>
-                                <div className='info'>“Under observation, we act less free, which means we effectively are less free.” - <span style={{ color: 'var(--primary)' }}>Edward Snowden</span></div>
+                                <div className='info'>{t("aboutMe.me").replace("{age}", calculateAge(config.born))}</div>
+                                <div className='info'>“Under observation, we act less free, which means we effectively are less free.” - <span className='author'>Edward Snowden</span></div>
                             </div>
 
                             <br/>

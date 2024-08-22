@@ -1,23 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from "react";
 
-function AnimatedTitle(props) {
-    useEffect(() => {
-        const { titles, time } = props
-        const updateTitle = () => {
-            let index = 0;
-            setInterval(() => {
-                index %= titles.length-1
-                index >= titles.length ? index=0 : index++;
-                if (document.title !== titles[index]) {
-                    document.title = titles[index];
-                }
-            }, time)
-        }
-    
+function AnimatedTitle({ text, time }) {
+    const [title, setTitle] = useState(text);
 
-        updateTitle();
-    }, [])
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTitle(prevTitle => {
+                const newTitle = prevTitle.slice(1) + prevTitle[0];
+                return newTitle;
+            });
+        }, time);
+
+        document.title = title;
+
+        return () => clearInterval(interval);
+    }, [ title, text ]);
 
     return(<></>)
 }

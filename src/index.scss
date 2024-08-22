@@ -1,7 +1,14 @@
 // =============================================== COLORS =============================================== // 
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 :root {
-  --primary: #b87ffa;
+  --primary: #4efac1;
+  --second: rgb(0, 183, 255);
   --bg: #070707;
   --elements: #0a0a0a;
   --elements-hover: #141414;
@@ -23,6 +30,7 @@
   --font: #0f0f0f;
   --font-darker: #3a3a3a;
 }
+
 
 // =============================================== SNOW =============================================== // 
 
@@ -47,7 +55,7 @@
 	}
   
 	90% {
-    opacity: 0.6;
+    opacity: 0.8;
 	}
 	100% {
     transform: translate(0, var(--snow-length));
@@ -101,6 +109,10 @@ code {
     flex-direction: row;
     display: flex;
     font-size: 15px;
+    
+    .time {
+      text-shadow: 0px 0px 5px var(--primary);
+    }
   }
   
   a {
@@ -270,3 +282,12 @@ code {
   }
 }
 
+
+@keyframes spin {
+  from {
+      --angle: 0deg;
+  }
+  to {
+      --angle: 360deg;
+  }
+}
