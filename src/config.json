@@ -10,55 +10,62 @@
     "projects": [
         {
             "id": 0,
+            "name": "Zap",
+            "language": "C",
+            "url": "https://github.com/maxi-schaefer/Zap",
+            "cover": "https://github.com/maxi-schaefer/Zap/raw/main/assets/zapCode.png"
+        },
+        {
+            "id": 1,
             "name": "Vortex",
             "language": "java",
             "url": "https://github.com/maxi-schaefer/vortex",
             "cover": "./images/vortex.png"
         },
         {
-            "id": 1,
-            "name": "Smaug Reverse Shell",
+            "id": 2,
+            "name": "Smaug RAT",
             "language": "python",
             "url": "https://github.com/maxi-schaefer/Smaug-Reverse-Shell",
             "cover": "./images/smaug.png"
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "Astro",
             "language": "javascript",
             "url": "https://github.com/maxi-schaefer/astro",
             "cover": "./images/astro.png"
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "GitPulse",
             "language": "reactJS",
             "url": "https://github.com/maxi-schaefer/GitPulse",
             "cover": "https://github.com/maxi-schaefer/GitPulse/raw/main/demo.png"
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "GLSL Sandbox",
             "language": "java",
             "url": "https://github.com/maxi-schaefer/GLSLSandbox",
             "cover": "./images/glslSandbox.png"
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "EVE Discord Bot",
             "language": "javascript",
             "url": "https://github.com/maxi-schaefer/EVE-Bot",
             "cover": "https://images.hdqwalls.com/wallpapers/wall-e-eve-minimal-4k-je.jpg"
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "HubX",
             "language": "java",
             "url": "https://www.spigotmc.org/resources/hubx.108373/",
             "cover": "./images/skeleton.png"
         },
         {
-            "id": 7,
+            "id": 8,
             "name": "CoinsX",
             "language": "java",
             "url": "https://www.spigotmc.org/resources/coinsx.108328/",
@@ -77,5 +84,5 @@
             "key": "de"
         }
     ],
-    "title": "Vibing • Maxi Schäfer • "
+    "title": "Vibing × gokimax.dev × "
 }

@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
-#wrapper {
-    background-color: var(--bg);
-    padding-top: 100px;
-}
-
 .container {
 
     .readme_container {
@@ -13,9 +8,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: var(--bg);
     }
-    
+
     .text {
         box-sizing: border-box;
         align-self: center;
@@ -27,7 +21,7 @@
         flex-direction: row;
         -webkit-box-align: center;
         align-items: center;
-        
+
         h1 {
             background: linear-gradient(90deg, var(--primary), var(--second));
             background-clip: text;
@@ -90,12 +84,10 @@
         svg:hover {
             transform: translateY(-2px);
             * {
-                -webkit-filter: drop-shadow( 0px 0px 2px var(--primary));
-                filter: drop-shadow( 0px 0px 2px var(--primary));
                 color: var(--primary);
             }
         }
-        
+
         * {
             font-size: 40px;
             color: var(--font);
@@ -106,10 +98,10 @@
     .image {
 
         svg {
-            pointer-events: none;
             position: relative;
             display: flex;
-
+            cursor: pointer;
+            outline: none;
             text-align: center;
             justify-content: center;
             border-radius: 50%;
@@ -131,6 +123,6 @@
         }
 
     }
-        
+
 
 }

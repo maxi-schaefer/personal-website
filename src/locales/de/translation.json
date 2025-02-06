@@ -1,12 +1,11 @@
 {
     "aboutMe": {
-        "first": "Hallo 👋🏻 Ich bin Maxi, ein ",
-        "me": "Hallo 👋🏻 Ich bin Maxi, ein {age}-Jähriger Schüler aus Deutschland."
+        "me": "Hallo 👋🏻 Ich bin Maxi, ein {age}-Jähriger aus Deutschland."
     },
 
     "projects": {
         "vortex": "Vortex ist eine in Java geschriebene Terminalvorlage, in der Sie Ihre eigenen benutzerdefinierten Befehle und Konfigurationen implementieren können",
-        "smaug_reverse_shell": "Eine in Python geschriebene Reverse Shell mit benutzerdefinierten Einstellungen, Client-Builder und Obfuscator + benutzerdefiniertem Client.",
+        "smaug_rat": "Eine in Python geschriebene RAT mit benutzerdefinierten Einstellungen, Client-Builder und Obfuscator + benutzerdefiniertem Client.",
         "astro": "Einfache Electron-JS-Anpassung mit Konfigurationsdatei.",
         "gitpulse": "Erstellen Sie Ihre eigene Github-Übersichtswebsite, auf der Sie alles anpassen können.",
         "glsl_sandbox": "Einfache GLSLSandbox für Shader-Tests, geschrieben in Java.",

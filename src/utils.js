@@ -11,7 +11,7 @@ export function delay(ms) {
 
 export function setLightMode() {
     localStorage.setItem("selectedTheme", "light")
-} 
+}
 
 export function changeTheme() {
     if(localStorage.getItem("selectedTheme") === "light")
@@ -47,21 +47,25 @@ export function CustomToastify(text, icon) {
 
 export function getLanguageColor(language) {
     const colors = [
-        { 
+        {
             name: "python",
             color: "#2b84ff"
         },
-        { 
+        {
             name: "javascript",
             color: "#f4ff2b"
         },
-        { 
+        {
             name: "java",
             color: "#eb8634"
         },
         {
             name: "reactJS",
             color: "#149eca"
+        },
+        {
+            name: "C",
+            color: "#555"
         }
     ]
 

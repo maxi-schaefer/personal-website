@@ -5,7 +5,7 @@
 
     "projects": {
         "vortex": "Vortex is a in java written terminal template, where you can implement your own custom commands and configs",
-        "smaug_reverse_shell": "A in python written Reverse Shell, with custom settings, client builder and obfuscator + custom written client.",
+        "smaug_rat": "A in python written RAT, with custom settings, client builder and obfuscator + custom written client.",
         "astro": "Simple electron js customization with config file.",
         "gitpulse": "Create your own Github Overview website, where you can customize everything.",
         "glsl_sandbox": "Simple GLSLSandbox for shader testing written in Java.",

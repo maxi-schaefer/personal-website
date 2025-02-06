@@ -2,8 +2,9 @@ import './Information.scss'
 import 'tippy.js/dist/tippy.css';
 import Tippy from '@tippyjs/react';
 import config from '../../config.json'
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 import Spotify from '../Spotify/Spotify'
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLanyard } from '../../lanyard/index.ts'
 import { BsTriangleFill } from 'react-icons/bs'
@@ -13,6 +14,15 @@ import { calculateAge } from '../../utils.js';
 const Information = (props) => {
     const { t } = useTranslation();
     const { data } = props
+    const [currentTime, setCurrentTime] = useState(Date.now());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(Date.now());
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     const lanyard = useLanyard({
         userId: config.discord_user,
@@ -21,27 +31,35 @@ const Information = (props) => {
     const discordStatus = (status) => {
         if(status === "dnd") {
             return (
-                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72ZM14 31C11.7909 31 10 32.7909 10 35V37C10 39.2091 11.7909 41 14 41H58C60.2091 41 62 39.2091 62 37V35C62 32.7909 60.2091 31 58 31H14Z" fill="#F23F43"/>
-                </svg>
+                <Tippy content="Do Not Disturb" placement='top'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72ZM14 31C11.7909 31 10 32.7909 10 35V37C10 39.2091 11.7909 41 14 41H58C60.2091 41 62 39.2091 62 37V35C62 32.7909 60.2091 31 58 31H14Z" fill="#F23F43"/>
+                    </svg>
+                </Tippy>
             )
         } else if(status === "online") {
-            return (                  
-                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
-                    <path d="M72 36C72 55.8823 55.8823 72 36 72C16.1177 72 0 55.8823 0 36C0 16.1177 16.1177 0 36 0C55.8823 0 72 16.1177 72 36Z" fill="#23A55A"/>
-                </svg>
+            return (
+                <Tippy content="Online" placement='top'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                        <path d="M72 36C72 55.8823 55.8823 72 36 72C16.1177 72 0 55.8823 0 36C0 16.1177 16.1177 0 36 0C55.8823 0 72 16.1177 72 36Z" fill="#23A55A"/>
+                    </svg>
+                </Tippy>
             )
         } else if(status === "idle") {
-            return ( 
-                <svg xmlns="http://www.w3.org/2000/svg" width="73" height="73" viewBox="0 0 73 73" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5032 71.1245C44.514 76.9463 64.6448 66.2545 70.4666 47.2437C76.2884 28.2329 65.5966 8.10212 46.5858 2.28032C42.085 0.902013 37.5214 0.449299 33.0997 0.813442C41.1801 6.97632 44.991 17.7338 41.8412 28.0192C37.7983 41.2211 23.8186 48.646 10.6166 44.6031C6.47117 43.3336 2.89533 41.0844 0.0652862 38.1871C0.677369 53.0225 10.4994 66.5298 25.5032 71.1245Z" fill="#F0B232"/>
-                </svg>
+            return (
+                <Tippy content="Idle" placement='top'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="73" height="73" viewBox="0 0 73 73" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5032 71.1245C44.514 76.9463 64.6448 66.2545 70.4666 47.2437C76.2884 28.2329 65.5966 8.10212 46.5858 2.28032C42.085 0.902013 37.5214 0.449299 33.0997 0.813442C41.1801 6.97632 44.991 17.7338 41.8412 28.0192C37.7983 41.2211 23.8186 48.646 10.6166 44.6031C6.47117 43.3336 2.89533 41.0844 0.0652862 38.1871C0.677369 53.0225 10.4994 66.5298 25.5032 71.1245Z" fill="#F0B232"/>
+                    </svg>
+                </Tippy>
             )
         } else {
-            return ( 
-                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72ZM36 54C45.9411 54 54 45.9411 54 36C54 26.0589 45.9411 18 36 18C26.0589 18 18 26.0589 18 36C18 45.9411 26.0589 54 36 54Z" fill="#7f838d"/>
-                </svg>
+            return (
+                <Tippy content="Offline" placement='top'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72ZM36 54C45.9411 54 54 45.9411 54 36C54 26.0589 45.9411 18 36 18C26.0589 18 18 26.0589 18 36C18 45.9411 26.0589 54 36 54Z" fill="#7f838d"/>
+                    </svg>
+                </Tippy>
             )
         }
     }
@@ -113,10 +131,10 @@ const Information = (props) => {
                     </div>
                     <div style={{ display: "flex", alignItems: "center" , justifyContent: "space-evenly"}}>
                         {
-                            !lanyard.isValidating && (<Spotify data={lanyard.data.data.spotify} listening_to_spotify={lanyard.data.data.listening_to_spotify}/>)
+                            !lanyard.isValidating && (<Spotify data={lanyard.data.data.spotify} currentTime={currentTime} listening_to_spotify={lanyard.data.data.listening_to_spotify}/>)
                         }
                     </div>
-                    
+
                 </div>
             </motion.div>
         </>

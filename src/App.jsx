@@ -33,7 +33,7 @@ function App() {
       translation: translationDE,
     },
   }
-  
+
   i18n.use(initReactI18next).init({
     resources,
     lng: localStorage.getItem("language"),
@@ -44,19 +44,19 @@ function App() {
   });
 
   /* ====================================================================================== */
-  
+
   const githubToast = () => (
     <div>
       Follow me on <a style={{ color: "var(--primary)"}} href="https://github.com/maxi-schaefer" target="_blank" rel="noreferrer">Github</a>
     </div>
   )
-  
+
   const githubStarToast = () => (
     <div>
       Star this project on <a style={{ color: "var(--primary)"}} href="https://github.com/maxi-schaefer/personal-website" target="_blank" rel="noreferrer">Github</a>
     </div>
   )
-  
+
   useEffect(() => {
     fetchGithubData(config.git_user).catch(console.error)
     fetchRandomQuote().catch(console.error);
@@ -64,9 +64,9 @@ function App() {
     CustomToastify(githubStarToast, <BsStarFill style={{ color: "#fcf347", width: "50px", height: "50px"}} />);
     CustomToastify(githubToast, <TbBrandGithub style={{ color: "var(--primary)", width: "50px", height: "50px"}} />);
   }, [])
-  
+
   /* ====================================================================================== */
-  
+
   const snow=()=> {
     let animationDelay = '0s';
     let fontSize = '100px';
@@ -81,9 +81,9 @@ function App() {
       return (<Snow key={i} id={i} style={style}/>)
     })
   }
-  
+
   /* ====================================================================================== */
-  
+
   const fetchGithubData = async (user) => {
     const apiResponse = await fetch(`https://api.github.com/users/${user}`)
     const data = await apiResponse.json()
@@ -103,7 +103,7 @@ function App() {
       setQuote(data);
     }
   }
-  
+
   const changeThemeWithKey = (e) => {
     if($(e.target).is('input') || $(e.target).is('textarea')) return;
     else {
@@ -112,9 +112,9 @@ function App() {
       }
     }
   }
-  
+
   /* ====================================================================================== */
-  
+
   return (
     <>
       <ToastContainer />
@@ -124,11 +124,11 @@ function App() {
           <LanguageSwitcher currentLang={i18n.language} i18n={i18n} />
           <Information data={githubData} quote={quote}/>
           <Projects data={config.projects}/>
-          <Contact /> 
+          <Contact />
           <Footer />
       </motion.div>
     </>
-    
+
   );
 }
 
