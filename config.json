@@ -1,0 +1,68 @@
+{
+    "githubId": "maxi-schaefer",
+
+    "experiences": [
+        {
+          "title": "Trainee IT specialist system integration",
+          "company": "CampusLan Software GmbH",
+          "period": "2024 - Present",
+          "description":
+            "I'm a Trainee IT Specialist in System Integration, passionate about building and maintaining efficient IT systems. I am currently gaining hands-on experience in network setup, system administration, and troubleshooting. Always eager to learn and grow, I aim to support businesses with reliable and modern IT solutions.",
+          "technologies": ["Python", "Node.js", "Java", "MongoDB", "MySQL", "Zenworks", "Novell", "Relution", "Docker"]
+        },
+        {
+          "title": "Student",
+          "type": "school",
+          "company": "Dr. Wintrich-Realschule Ebersberg",
+          "period": "2017 - 2023",
+          "description":
+            "Developed and maintained multiple projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality. I did this all in my freetime, while being in school.",
+          "technologies": ["React", "Express.js", "PostgreSQL", "Java", "Python", "MongoDB", "Next.js", "Spigot"]
+        }
+      ],
+
+    "projects": [
+        {
+            "title": "Zap",
+            "description": "A simple text editor written in C with syntax highlighting and search.",
+            "image": "https://raw.githubusercontent.com/maxi-schaefer/Zap/refs/heads/main/assets/zapCode.png",
+            "technologies": ["C", "Makefile"],
+            "githubUrl": "https://github.com/maxi-schaefer/zap"
+        },
+        {
+            "title": "Spring Authentication",
+            "description": "Simple Spring authentication Project with JWT and MySQL for learning purpose ",
+            "image": "/placeholder.svg",
+            "technologies": ["Java", "Spring Boot", "MySQL", "JWT"],
+            "githubUrl": "https://github.com/maxi-schaefer/spring-authentication"
+        },
+        {
+            "title": "EVE Discord Bot",
+            "description": "EVE is a all in one Discord Bot. It comes with many features such as a Giveaway System, Application System and much more ",
+            "image": "https://camo.githubusercontent.com/0636312573400de4e45a06f7437f6a76ed79f51cda650ca0b2e2c3ca6fed3598/68747470733a2f2f696d616765732e68647177616c6c732e636f6d2f77616c6c7061706572732f77616c6c2d652d6576652d6d696e696d616c2d346b2d6a652e6a7067",
+            "technologies": ["javascript", "discord.js", "MongoDB"],
+            "githubUrl": "https://github.com/maxi-schaefer/EVE-Bot"
+        },
+        {
+            "title": "Chronos Nuker",
+            "description": "Discord Account Nuker with many features! This nuker abuses the discord api to mess with user accounts.",
+            "image": "https://raw.githubusercontent.com/maxi-schaefer/Chronos-Nuker/refs/heads/main/images/terminal.png",
+            "technologies": ["Python"],
+            "githubUrl": "https://github.com/maxi-schaefer/Chronos-Nuker"
+        },
+        {
+            "title": "Smaug RAT",
+            "description": "A in python written Remote Access Tool with a custom payload builder, config and much more.",
+            "image": "https://raw.githubusercontent.com/maxi-schaefer/Smaug-RAT/main/images/demo.png",
+            "technologies": ["Python", "Sockets"],
+            "githubUrl": "https://github.com/maxi-schaefer/Smaug-RAT"
+        },
+        {
+            "title": "Vortex",
+            "description": "Vortex is a in java written template for complex java applications with mysql support and custom configs. ",
+            "image": "https://raw.githubusercontent.com/maxi-schaefer/vortex/refs/heads/main/demo.png",
+            "technologies": ["Java", "MySQL", "Maven"],
+            "githubUrl": "https://github.com/maxi-schaefer/vortex"
+        }
+    ]
+}
