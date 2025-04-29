@@ -3,8 +3,9 @@
 import { Building2, Calendar, School2 } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { motion } from 'framer-motion';
-import { experiences } from '../config.json'
 import FloatingBubbles from "./ui/floatin-bubbles";
+import config from '../config.json';
+const experiences = config.experiences
 
 interface ExperienceItemProps {
     title: string;

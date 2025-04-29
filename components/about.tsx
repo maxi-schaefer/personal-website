@@ -4,15 +4,17 @@ import { cn } from '@/lib/utils';
 import React, { HTMLAttributes, useEffect, useState } from 'react'
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Download, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import FloatingBubbles from './ui/floatin-bubbles';
 import Link from 'next/link';
 import { fetchGithubData } from '@/lib/githubApi';
-import { githubId } from '../config.json'
+import config from '../config.json';
+import Image from 'next/image';
+const githubId = config.githubId
 
 export default function About() {
-    const [githubData, setGithubData] = useState();
+    const [githubData, setGithubData] = useState<{ avatar_url: string }>();
 
     useEffect(() => {
         const data = fetchGithubData(githubId);
@@ -25,7 +27,7 @@ export default function About() {
       }: HTMLAttributes<HTMLDivElement>) => (
         <div className={cn("mt-10 w-48 h-48 md:w-64 md:h-64", className)} {...props}>
           <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
-            <img src={githubData?.avatar_url } alt="" className="object-cover" />
+            <Image src={githubData?.avatar_url || '/placeholder.svg'} alt="" className="object-cover" />
           </div>
         </div>
     );

@@ -1,8 +1,9 @@
+import { cn } from '@/lib/utils';
 import React from 'react';
 
 export function TryHackMeLogo({ className }: { className?: string }) {
   return (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="fill-color" height="24" width="24">
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={cn("fill-color", className)} height="24" width="24">
         <path d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0 -4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a0.625 0.625 0 1 0 0 -1.25H4.761a3.273 3.273 0 0 1 -3.27 
         -3.27A3.273 3.273 0 0 1 6.59 7.08a0.625 0.625 0 0 0 0.7 -1.035 4.488 4.488 0 0 0 -1.68 -0.69 5.223 5.223 0 0 1 5.096 -4.104 5.221 5.221 0 0 1 5.174 4.57 4.489 4.489 0 0 
         0 -0.488 0.305 0.625 0.625 0 1 0 0.731 1.013 3.245 3.245 0 0 1 1.912 -0.616 3.278 3.278 0 0 1 3.203 2.61 0.625 0.625 0 0 0 1.225 -0.251 4.533 4.533 0 0 0 -4.428 -3.61 4.54 

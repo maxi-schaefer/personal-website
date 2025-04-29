@@ -1,23 +1,7 @@
 import React from 'react'
-import { Logo } from './navbar/logo'
 import Link from 'next/link'
 import { Separator } from './ui/separator'
 import { Github, Twitter } from 'lucide-react'
-
-const footerLinks = [
-    {
-        title: "About",
-        link: "#about"
-    },
-    {
-        title: "Experience",
-        link: "#experience"
-    },
-    {
-        title: "Projects",
-        link: "#projects"
-    }
-]
 
 export default function Footer() {
   return (

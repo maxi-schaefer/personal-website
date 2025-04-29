@@ -2,12 +2,13 @@
 
 import React from 'react'
 import { Badge } from './ui/badge';
-import { projects } from '../config.json';
 import { ExternalLink, Github, } from 'lucide-react';
 import { Button } from './ui/button';
 import Image from 'next/image';
 import { motion } from 'framer-motion'
 import FloatingBubbles from './ui/floatin-bubbles';
+import config from '../config.json';
+const projects = config.projects
 
 interface ProjectCardProps {
     title: string;
