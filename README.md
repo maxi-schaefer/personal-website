@@ -1,6 +1,10 @@
-# Maxi's Personal Site
+# Portfolio
+
+<a href="https://gokimax.dev">![Demo](./assets/demo.png)</a>
+
 The code behind my personal site. :)
 
 ## Powered By
-- [Github Api](https://docs.github.com/en/rest)
 - [ShadCN Ui](https://ui.shadcn.com)
+- [NextJS](https://nextjs.org/)
+- [Spotify API](https://developer.spotify.com)
