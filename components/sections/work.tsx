@@ -24,8 +24,7 @@ export default function ProjectsSection({
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
-              githubUrl={project.githubUrl}
-              liveUrl={project.liveUrl}
+              url={project.url}
               description={project.description}
               image={project.image}
               technologies={project.tags}
