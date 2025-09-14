@@ -17,14 +17,14 @@
         {
             "title": "Invana",
             "description": "Designed with simplicity and trust in mind, it's built to empower developers, not get in their way. ",
-            "image": "https://github.com/maxi-schaefer/invana/raw/develop/assets/dashboard.png",
+            "image": "/projects/invana.png",
             "tags": ["Typescript", "Python", "MongoDB", "Java", "shadcnUI"],
             "url": "https://github.com/maxi-schaefer/invana"
         },
         {
             "title": "Simple IP Manager",
             "description": "A blazing-fast IP profile switcher for sysadmins and network engineers — built with Electron, React, and TypeScript.",
-            "image": "https://github.com/maxi-schaefer/simple-ip-manager/raw/main/docs/images/dashboard.png",
+            "image": "/projects/simple-ip-manager.png",
             "tags": ["Typescript", "Javascript", "Powershell"],
             "url": "https://github.com/maxi-schaefer/simple-ip-manager"
         },

@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import { SpotifyNowPlaying } from "./spotify-now-playing";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from 'motion'
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
