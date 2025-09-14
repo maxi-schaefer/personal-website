@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    container_name: my-nextjs-app
+    restart: always
+    enviroment:
+      SPOTIFY_CLIENT_ID: CLIENT_ID
+      SPOTIFY_CLIENT_SECRET: CLIENT_SECRET
+      SPOTIFY_REFRESH_TOKEN: REFREH_TOKEN 
+    ports:
+      - "3000:3000"
