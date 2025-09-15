@@ -5,9 +5,7 @@ import ContactSection from "@/components/sections/connect";
 import Footer from "@/components/sections/footer";
 import HeroSection from "@/components/sections/hero";
 import WorkSection from "@/components/sections/work";
-import { Star, StarIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { toast } from "sonner";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("");

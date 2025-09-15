@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Badge } from "./badge";
 import { Button } from "./button";
 import { ExternalLink, Github, MoreHorizontal } from "lucide-react";
@@ -40,12 +39,7 @@ export default function ProjectCard({
         >
           {/* Project Image */}
           <div className="relative h-64 overflow-hidden bg-accent/20">
-            <Image
-              src={image}
-              alt={title}
-              className="object-cover rounded-xl transition-transform duration-300 scale-90 group-hover:scale-95"
-              fill
-            />
+            <img src={image} alt={title} className="absolute top-0 left-0 w-full h-full  object-cover rounded-xl transition-transform duration-300 scale-90 group-hover:scale-95"/>
           </div>
 
           {/* Content */}

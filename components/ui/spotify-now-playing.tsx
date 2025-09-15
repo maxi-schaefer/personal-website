@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -33,7 +32,7 @@ export function SpotifyNowPlaying({ isPlaying, track }: SpotifyNowPlayingProps) 
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Image
+          <img
             src={track.albumArtUrl}
             alt={track.title}
             width={64}
