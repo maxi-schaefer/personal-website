@@ -42,14 +42,5 @@
             "tags": ["Java", "MySQL", "Maven"],
             "url": "https://github.com/maxi-schaefer/vortex"
         }
-    ],
-    "skills": [
-        { "name": "React", "icon": "SiReact" },
-        { "name": "TypeScript", "icon": "SiTypescript" },
-        { "name": "Next.js", "icon": "SiNextdotjs" },
-        { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-        { "name": "Node.js", "icon": "SiNodedotjs" },
-        { "name": "PostgreSQL", "icon": "SiPostgresql" }
     ]
-
 }
