@@ -134,6 +134,42 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* show anchor glyph only on hover and keep it unobtrusive */
+  .prose .heading-anchor {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  .prose h1 {
+    @apply text-3xl font-bold
+  }
+
+  .prose h2 {
+    @apply text-2xl font-bold
+  }
+
+  .prose h1:hover .heading-anchor,
+  .prose h2:hover .heading-anchor,
+  .prose h3:hover .heading-anchor,
+  .prose h4:hover .heading-anchor {
+    opacity: 1;
+  }
+
+  .prose code, .prose pre, .prose pre code {
+    @apply rounded-sm p-1
+  }
+
+  /* reveal anchor when user hovers the heading */
+  .prose h1:hover .heading-anchor,
+  .prose h2:hover .heading-anchor,
+  .prose h3:hover .heading-anchor,
+  .prose h4:hover .heading-anchor {
+    opacity: 1;
+  }
+
 }
 
 @layer utilities {
