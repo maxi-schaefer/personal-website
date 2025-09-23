@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import rehypePrettyCode from "rehype-pretty-code";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export function generateMetadata({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
 
@@ -54,41 +54,40 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const url = `https://gokimax.dev/blog/${params.slug}`;
 
   const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: title,
-  description,
-  image: coverImage,
-  author: {
-    "@type": "Person",
-    name: author,
-  },
-  datePublished: date,
-  dateModified: date,
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": url,
-  },
-};
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    image: coverImage,
+    author: {
+      "@type": "Person",
+      name: author,
+    },
+    datePublished: date,
+    dateModified: date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
 
-
-    const processed = await unified()
+  const processed = await unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
-        behavior: "append",
-        content: {
+      behavior: "append",
+      content: {
         type: "element",
         tagName: "span",
         properties: { className: ["heading-anchor"] },
         children: [{ type: "text", value: "🔗" }],
-        },
+      },
     })
     .use(rehypePrettyCode, {
-        theme: "one-dark-pro",
-        keepBackground: true,
+      theme: "one-dark-pro",
+      keepBackground: true,
     })
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(post.content);
@@ -97,29 +96,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
   return (
     <div className="bg-background">
-       <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      {/* Back button (fixed top-left) */}
       <div className="fixed top-4 left-4 z-50">
-        <Link
-          href="/"
-          aria-label="Back to blog"
-        >
+        <Link href="/" aria-label="Back to blog">
           <Button className="cursor-pointer group">
-            <ArrowLeft className="h-4 w-4 mr-2 group-hover:translate-x-0.5 transition-all" /> 
+            <ArrowLeft className="h-4 w-4 mr-2 group-hover:translate-x-0.5 transition-all" />
             Back
-        </Button>
+          </Button>
         </Link>
       </div>
-
       <article className="max-w-4xl mx-auto px-6 py-16">
-        {/* cover image */}
         {post.metadata.coverImage && (
           <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
-            {/* If you prefer Next/Image you can swap this <img> for <Image> */}
             <img
               src={post.metadata.coverImage}
               alt={post.metadata.title}
@@ -128,7 +119,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             />
           </div>
         )}
-
         <header className="mb-8">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-2">
             {post.metadata.title}
@@ -144,8 +134,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               : null}
           </p>
         </header>
-
-        {/* markdown content (tailwind-prose styles apply to headings, lists, code, etc.) */}
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </div>
@@ -154,8 +142,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   );
 }
 
-// static params for App Router
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((p) => ({ slug: p.slug }));
 }
