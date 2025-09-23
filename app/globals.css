@@ -150,7 +150,7 @@
   }
 
   p code, li code {
-    @apply bg-muted
+    @apply bg-muted;
   }
 
   .prose li {
@@ -178,6 +178,22 @@
 
   .prose code, .prose pre, .prose pre code {
     @apply rounded-sm p-1 leading-relaxed text-wrap break-words overflow-x-auto;
+    counter-reset: line;
+  }
+
+  .prose pre code .line {
+    display: block;
+    counter-increment: line;
+  }
+
+  .prose pre code .line::before {
+    content: counter(line);
+    display: inline-block;
+    width: 2rem;
+    margin-right: 1rem;
+    text-align: right;
+    color: rgb(156 163 175);
+    user-select: none;
   }
 
   /* reveal anchor when user hovers the heading */

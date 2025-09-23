@@ -1,7 +1,7 @@
 ---
 title: "Dockerizing Next.js Applications"
 description: "A step-by-step guide to dockerize your nextjs applications using a Dockerfile and docker-compose."
-coverImage: "https://img.freepik.com/fotos-kostenlos/ein-gemaelde-eines-bergsees-mit-einem-berg-im-hintergrund_188544-9126.jpg?semt=ais_hybrid&w=740&q=80"
+coverImage: "/images/dockerizing_next_js.png"
 author: "Maxi Schäfer"
 date: "2025-09-23"
 readTime: "3 min"

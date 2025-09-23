@@ -1,6 +1,5 @@
 // app/blog/[slug]/page.tsx
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
 
@@ -12,8 +11,9 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeStringify from "rehype-stringify";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Copy, CopyIcon } from "lucide-react";
 import rehypePrettyCode from "rehype-pretty-code";
+import { transformerCopyButton } from '@rehype-pretty/transformers'
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
@@ -88,6 +88,18 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     .use(rehypePrettyCode, {
       theme: "one-dark-pro",
       keepBackground: true,
+      onVisitLine(node) {
+        if (node.children.length === 0) {
+          node.children = [{ type: "text", value: " " }];
+        }
+        node.properties.className = (node.properties.className || []).concat("line");
+      },
+      onVisitHighlightedLine(node) {
+        node.properties.className = (node.properties.className || []).concat("highlighted");
+      },
+      transformers: [
+        transformerCopyButton()
+      ]
     })
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(post.content);
