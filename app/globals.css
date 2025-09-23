@@ -168,7 +168,7 @@
   }
 
   .prose code, .prose pre, .prose pre code {
-    @apply rounded-sm p-1
+    @apply rounded-sm p-1 leading-relaxed text-wrap break-words overflow-x-auto;
   }
 
   /* reveal anchor when user hovers the heading */
