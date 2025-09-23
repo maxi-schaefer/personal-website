@@ -1,7 +1,7 @@
 ---
 title: "Spring Authentication Guide"
 description: "A step-by-step guide to implementing authentication in Spring Boot using Spring Security with code examples."
-coverImage: "/images/spring_authentication.png"
+coverImage: "https://gokimax.dev/images/spring_authentication.png"
 author: "Maxi Schäfer"
 date: "2025-09-23"
 readTime: "5 min"
