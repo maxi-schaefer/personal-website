@@ -18,7 +18,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 type Props = { params: { slug: string } };
 
 export async function generateMetadata({ params }: Props) {
-  const post = getPostBySlug(await params.slug);
+  const post = getPostBySlug(params.slug);
   if (!post) return {};
 
   const { title, description, coverImage, date, author } = post.metadata;
