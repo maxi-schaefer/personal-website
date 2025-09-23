@@ -84,8 +84,8 @@ export default async function BlogPostPage({ params }: Props) {
         content: {
         type: "element",
         tagName: "span",
-        properties: { className: ["ml-2", "text-gray-400", "hover:text-primary"] },
-        children: [{ type: "text", value: "#" }],
+        properties: { className: ["heading-anchor"] },
+        children: [{ type: "text", value: "🔗" }],
         },
     })
     .use(rehypePrettyCode, {

@@ -8,5 +8,7 @@ export async function GET(req: NextRequest) {
         new Date(b.metadata.date).getTime() -
         new Date(a.metadata.date).getTime()
     )
+    .slice(0, 4);
+
   return NextResponse.json(posts);
 }

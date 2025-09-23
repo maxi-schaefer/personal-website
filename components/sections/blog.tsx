@@ -23,7 +23,7 @@ export default function BlogSection({ sectionsRef }: BlogSectionProps) {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch("/api/posts")
+    fetch("/api/posts/recent")
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error(err));
@@ -38,7 +38,26 @@ export default function BlogSection({ sectionsRef }: BlogSectionProps) {
       className="min-h-screen py-12 sm:py-32 mx-auto opacity-0"
     >
       <div className="space-y-12 sm:space-y-16">
-        <h2 className="text-3xl sm:text-4xl font-light">Recent Thoughts</h2>
+        <h2 className="text-3xl sm:text-4xl font-light my-0">Recent Thoughts</h2>
+        <Link
+          href="/blog"
+          className="font-mono group mt-4 flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+        >
+          <span>View all Posts</span>
+          <svg
+            className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </Link>
 
         <div className="flex flex-wrap gap-6 sm:gap-8 justify-start">
           {posts.map((post) => (
@@ -82,28 +101,6 @@ export default function BlogSection({ sectionsRef }: BlogSectionProps) {
               </article>
             </Link>
           ))}
-        </div>
-
-        <div className="mt-12">
-          <Link
-            href="/blog"
-            className="font-mono group mt-4 flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-          >
-            <span>View all Posts</span>
-            <svg
-              className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>

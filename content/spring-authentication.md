@@ -4,10 +4,8 @@ description: "A step-by-step guide to implementing authentication in Spring Boot
 coverImage: "https://github.com/maxi-schaefer/spring-authentication/raw/main/banner.png"
 author: "Maxi Schäfer"
 date: "2025-09-23"
-readTime: "10 min"
+readTime: "5 min"
 ---
-
-# Spring Authentication Guide
 
 Authentication is a critical part of any application that requires users to sign in. In this post, we’ll walk through how to implement **authentication in Spring Boot** using **Spring Security**. We’ll cover basic authentication, custom login pages, and securing REST APIs.
 

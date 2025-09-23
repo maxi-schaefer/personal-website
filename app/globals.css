@@ -137,15 +137,24 @@
   }
   /* show anchor glyph only on hover and keep it unobtrusive */
   .prose .heading-anchor {
-    text-decoration: none;
+    text-decoration: none !important;
     color: inherit;
     margin-left: 0.25rem;
     opacity: 0;
     transition: opacity 0.15s ease;
+    cursor: pointer;
   }
 
   .prose a {
     @apply font-mono underline! hover:opacity-80
+  }
+
+  p code, li code {
+    @apply bg-muted
+  }
+
+  .prose li {
+    @apply list-disc
   }
 
   .prose h1 {
