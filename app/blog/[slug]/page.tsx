@@ -113,10 +113,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="fixed top-4 left-4 z-50">
-        <Link href="/" aria-label="Back to blog">
-          <Button className="cursor-pointer group">
+        <Link href="/blog" aria-label="Back to blog">
+          <Button className="cursor-pointer group font-mono">
             <ArrowLeft className="h-4 w-4 mr-2 group-hover:translate-x-0.5 transition-all" />
-            Back
+            View all Posts
           </Button>
         </Link>
       </div>
