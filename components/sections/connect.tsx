@@ -10,7 +10,7 @@ import { AiFillBook, AiFillDiscord } from 'react-icons/ai'
 export default function ContactSection({ sectionsRef }: { sectionsRef: RefObject<(HTMLElement | null)[]> }) {
 
   return (
-    <section id="connect" ref={(el) => {(sectionsRef.current[2] = el)}} className="py-20 sm:py-32 opacity-0">
+    <section id="connect" ref={(el) => {(sectionsRef.current[3] = el)}} className="py-20 sm:py-32 opacity-0">
         <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
             <div className="space-y-6 sm:space-y-8">
                 <h2 className="text-3xl sm:text-4xl font-light">Let's Connect</h2>

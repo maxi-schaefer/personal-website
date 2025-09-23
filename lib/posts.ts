@@ -8,7 +8,7 @@ export function getAllPosts() {
     const fileNames = fs.readdirSync(postDirectory);
 
     return fileNames.map((fileName) => {
-        const slug = fileName.replace("/\.md$/", "");
+        const slug = fileName.replace(".md", "");
         const fullPath = path.join(postDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, "utf-8");
         const { data, content } = matter(fileContents);
@@ -17,10 +17,11 @@ export function getAllPosts() {
             slug,
             metadata: data as {
                 title: string,
+                readTime: string,
                 description: string,
-                cover: string,
+                coverImage: string,
                 author: string,
-                date: string
+                date: string,
             },
             content
         }

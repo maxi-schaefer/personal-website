@@ -18,19 +18,26 @@ import rehypePrettyCode from "rehype-pretty-code";
 type Props = { params: { slug: string } };
 
 export async function generateMetadata({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(await params.slug);
   if (!post) return {};
 
-  const { title, description, coverImage } = post.metadata;
+  const { title, description, coverImage, date, author } = post.metadata;
+  const url = `https://gokimax.dev/blog/${params.slug}`;
 
   return {
-    title: `${title} | My Blog`,
-    description: description || "Read this blog post",
+    title: `${title} | Developer Blog`,
+    description,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title,
       description,
-      images: coverImage ? [{ url: coverImage }] : [],
+      url,
       type: "article",
+      publishedTime: date,
+      authors: [author],
+      images: coverImage ? [{ url: coverImage, alt: title }] : [],
     },
     twitter: {
       card: "summary_large_image",
@@ -44,6 +51,27 @@ export async function generateMetadata({ params }: Props) {
 export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
+
+  const { title, description, coverImage, date, author } = post.metadata;
+  const url = `https://gokimax.dev/blog/${params.slug}`;
+
+  const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description,
+  image: coverImage,
+  author: {
+    "@type": "Person",
+    name: author,
+  },
+  datePublished: date,
+  dateModified: date,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": url,
+  },
+};
 
 
     const processed = await unified()
@@ -61,7 +89,7 @@ export default async function BlogPostPage({ params }: Props) {
         },
     })
     .use(rehypePrettyCode, {
-        theme: "github-dark",
+        theme: "one-dark-pro",
         keepBackground: true,
     })
     .use(rehypeStringify, { allowDangerousHtml: true })
@@ -70,7 +98,12 @@ export default async function BlogPostPage({ params }: Props) {
   const contentHtml = String(processed);
 
   return (
-    <>
+    <div className="bg-background">
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Back button (fixed top-left) */}
       <div className="fixed top-4 left-4 z-50">
         <Link
@@ -119,7 +152,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </div>
       </article>
-    </>
+    </div>
   );
 }
 

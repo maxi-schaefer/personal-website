@@ -1,8 +1,7 @@
 "use client";
 
-import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import BlogSection from "@/components/sections/blog";
 import ContactSection from "@/components/sections/connect";
-import Footer from "@/components/sections/footer";
 import HeroSection from "@/components/sections/hero";
 import WorkSection from "@/components/sections/work";
 import { useEffect, useRef, useState } from "react";
@@ -39,12 +38,11 @@ export default function Home() {
 
   return (
     <>
-      <ScrollProgress />
       <div className="min-h-screen bg-background text-foreground relative">
         <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
           <div className="flex flex-col gap-4">
             {
-              ["hero", "work", "connect"].map((section) => (
+              ["hero", "work", "blogs", "connect"].map((section) => (
                 <button
                   key={section}
                   onClick={() => {
@@ -65,12 +63,9 @@ export default function Home() {
         <main className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
           <HeroSection sectionsRef={sectionsRef} />
           <WorkSection sectionsRef={sectionsRef} />
+          <BlogSection sectionsRef={sectionsRef} />
           <ContactSection sectionsRef={sectionsRef} />
-
-          <Footer />
         </main>
-
-        <div className="fixed bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
       </div>
     </>
   );

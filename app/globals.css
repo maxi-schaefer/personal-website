@@ -130,7 +130,8 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-  }
+    scroll-behavior: smooth; 
+   }
   body {
     @apply bg-background text-foreground;
   }
@@ -143,12 +144,20 @@
     transition: opacity 0.15s ease;
   }
 
+  .prose a {
+    @apply font-mono underline! hover:opacity-80
+  }
+
   .prose h1 {
     @apply text-3xl font-bold
   }
 
   .prose h2 {
     @apply text-2xl font-bold
+  }
+
+  .prose h3 {
+    @apply text-xl font-bold
   }
 
   .prose h1:hover .heading-anchor,
