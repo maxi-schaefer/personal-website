@@ -15,7 +15,7 @@ export default function ProjectsSection({
       ref={(el) => {
         sectionsRef.current[1] = el;
       }}
-      className="min-h-screen py-20 sm:py-32 opacity-1 sm:opacity-0 mx-auto"
+      className="min-h-screen py-20 sm:py-32 sm:opacity-0 mx-auto"
     >
       <div className="space-y-12">
         <h2 className="text-3xl sm:text-4xl font-light">Projects</h2>
