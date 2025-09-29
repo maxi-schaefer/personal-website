@@ -94,7 +94,7 @@
 }
 
 .dark {
-  --background: oklch(15.434% 0.00002 271.152);
+  --background: oklch(20.904% 0.00002 271.152);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -143,6 +143,10 @@
     opacity: 0;
     transition: opacity 0.15s ease;
     cursor: pointer;
+  }
+
+  .prose img {
+    @apply rounded-md;
   }
 
   .prose a {

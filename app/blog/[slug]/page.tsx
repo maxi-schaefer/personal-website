@@ -11,9 +11,10 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeStringify from "rehype-stringify";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Copy, CopyIcon } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from '@rehype-pretty/transformers'
+import { motion } from 'motion/react';
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);

@@ -64,7 +64,7 @@ export default function BlogSection({ sectionsRef }: BlogSectionProps) {
             <Link
               key={post.metadata.title}
               href={`/blog/${post.slug.replace(".md", "")}`}
-              className="w-full sm:w-[48%] cursor-pointer group"
+              className="w-full sm:w-[48%] cursor-pointer group shadow-2xs hover:-translate-y-2 transition-transform duration-300"
             >
               <article className="p-6 sm:p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 text-muted-foreground font-mono h-full flex flex-col justify-between">
                 <div className="space-y-4">
