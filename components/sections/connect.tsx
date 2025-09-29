@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { RefObject } from 'react'
 import { MagicCard } from '../magicui/magic-card'
 import { useTheme } from 'next-themes'
-import { Github, Twitter } from 'lucide-react';
+import { Github, Microchip, Twitter } from 'lucide-react';
 import { AiFillBook, AiFillDiscord } from 'react-icons/ai'
 
 export default function ContactSection({ sectionsRef }: { sectionsRef: RefObject<(HTMLElement | null)[]> }) {
@@ -47,7 +47,7 @@ export default function ContactSection({ sectionsRef }: { sectionsRef: RefObject
                     { name: "Github", handle: "@maxi-schaefer", url: "https://github.com/maxi-schaefer", icon: Github },
                     { name: "Discord", handle: "@gokimax", url: "https://discord.com/users/1106596197306744882", icon: AiFillDiscord },
                     { name: "Twitter", handle: "@gokimax_x", url: "https://x.com/gokimax_x", icon: Twitter },
-                    { name: "TryHackMe", handle: "@Maxi.Schaefer", url: "https://tryhackme.com/p/Maxi.Schaefer", icon: AiFillBook },
+                    { name: "TryHackMe", handle: "@gokimax", url: "https://tryhackme.com/p/gokimax", icon: Microchip },
                   ].map((social) => (
                     <Link
                       key={social.name}
